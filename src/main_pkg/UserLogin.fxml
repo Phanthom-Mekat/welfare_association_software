@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="823.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.UserLoginController">
+   <children>
+      <Label layoutX="221.0" layoutY="315.0" prefHeight="27.0" prefWidth="91.0" text="User ID" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="221.0" layoutY="369.0" prefHeight="27.0" prefWidth="91.0" text="Password" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userIdTextField" layoutX="319.0" layoutY="309.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="passwordTextField" layoutX="319.0" layoutY="363.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88;">
+         <effect>
+            <ColorAdjust />
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="userTypeComboBox" layoutX="221.0" layoutY="238.0" opacity="0.75" prefHeight="39.0" prefWidth="373.0" promptText="Select User Type" style="-fx-background-radius: 88;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Button layoutX="442.0" layoutY="410.0" mnemonicParsing="false" onAction="#forgotPasswordButtonOnClick" opacity="0.61" prefHeight="31.0" prefWidth="145.0" style="-fx-background-radius: 88;" text="Forgot Passwod?" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="login" layoutX="484.0" layoutY="449.0" mnemonicParsing="false" onAction="#loginButtonOnClick" opacity="0.75" prefHeight="39.0" prefWidth="101.0" style="-fx-background-radius: 88;" text="Login" textFill="#660aff">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="signupButton" layoutX="322.0" layoutY="449.0" mnemonicParsing="false" onAction="#signUpButtonOnClick" opacity="0.75" prefHeight="39.0" prefWidth="109.0" style="-fx-background-radius: 88;" text="Sign Up" textFill="#00ff12">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="306.0" layoutY="70.0" prefHeight="71.0" prefWidth="178.0" text="Welcome" textFill="#e30097">
+         <font>
+            <Font name="OCR A Extended" size="41.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="clockLabel" layoutX="23.0" layoutY="602.0" prefHeight="31.0" prefWidth="337.0" text="Clock:" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="exitButton" blendMode="SRC_ATOP" layoutX="23.0" layoutY="548.0" mnemonicParsing="false" onAction="#ExitButtonOnClick" opacity="0.75" prefHeight="28.0" prefWidth="153.0" style="-fx-background-radius: 77;" text="Click here to Exit">
+         <font>
+            <Font name="Comic Sans MS Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
