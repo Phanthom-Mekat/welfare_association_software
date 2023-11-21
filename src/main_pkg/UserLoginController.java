@@ -93,6 +93,15 @@ public class UserLoginController implements Initializable {
                  Scene scene = new Scene(root);
                  currentStage.setScene(scene);
              }
+             if(userType.equals("Garment Industry Workers")){                 
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_7_WelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_7_WelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }    
+             
         }
         
         else{
