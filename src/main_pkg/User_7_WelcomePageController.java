@@ -4,13 +4,18 @@
  */
 package main_pkg;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
 /**
@@ -19,18 +24,25 @@ import javafx.scene.layout.BorderPane;
  */
 public class User_7_WelcomePageController implements Initializable {
 
+    @FXML
+    private Label userName;
+    private Object currentStage;
 
-    
-
+    public void setUserFullName(String fullName) {
+        userName.setText(fullName);
+   
+    }
+             
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
 
     @FXML
-    private void taskManagementOnClick(ActionEvent event) {
-    }
+    private void taskManagementOnClick(ActionEvent event) throws IOException {
 
+    }
+ 
     @FXML
     private void CommunicationButtonOnClick(ActionEvent event) {
     }
@@ -38,7 +50,7 @@ public class User_7_WelcomePageController implements Initializable {
     @FXML
     private void taskStatusUpdatesOnClick(ActionEvent event) {
     }
-
+    
     @FXML
     private void feedbackSubmissionOnClick(ActionEvent event) {
     }
@@ -61,10 +73,6 @@ public class User_7_WelcomePageController implements Initializable {
 
     @FXML
     private void mainMenuButtonOnClick(ActionEvent event) {
-    }
+    }   
 
-    void setUserFullName(String userFullName) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-    
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Quality_Control_SceneController">
+   <children>
+      <Text layoutX="229.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quality Control Scene" />
+   </children>
+</AnchorPane>

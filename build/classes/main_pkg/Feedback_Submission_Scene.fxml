@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="main_pkg.Feedback_Submission_SceneController">
+   <children>
+      <Text layoutX="198.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedback Submission Scene" />
+   </children>
+</AnchorPane>

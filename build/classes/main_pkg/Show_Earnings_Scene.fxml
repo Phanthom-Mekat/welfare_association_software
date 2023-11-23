@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Show_Earnings_SceneController">
+   <children>
+      <Text layoutX="220.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show Earning Scene" />
+   </children>
+</AnchorPane>
