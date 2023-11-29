@@ -1,11 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
+<BorderPane fx:id="bordarpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_4_WelcomePageController">
+   <top>
+      <MenuBar style="-fx-background-color: linear-gradient(to bottom, #F0F8FF, #bc310e);" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tasks">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#generateInvoicesOnClick" text="Generate Invoices for Clients" />
+                  <MenuItem mnemonicParsing="false" onAction="#SubmitAuditReport" text="Submit Audit Report to HR Manager" />
+                  <MenuItem mnemonicParsing="false" onAction="#PayRollOnClick" text="Payroll And Processing of employees" />
+                  <MenuItem mnemonicParsing="false" onAction="#ProcessExpenseReimbursementOnCLick" text="Process Expense Reimbursement for employees" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#overtimedataanalysisfromPayrollONClick" text="Overtime data of employees from Payroll" />
+                  <MenuItem mnemonicParsing="false" onAction="#termsandpolicyOnClick" text="Updated Terms And Policy of the firm" />
+                  <MenuItem mnemonicParsing="false" onAction="#ReimbursementReportsOnClick" text="Reimbursement request from employees" />
+                  <MenuItem mnemonicParsing="false" onAction="#TrackAddWorkHrsOnClk" text="Track validity of overtime working hours of employees" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Nevigator">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#navigateToDashboard" text="Back" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ButtonBar prefHeight="29.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #F0F8FF, #bc310e);" BorderPane.alignment="CENTER">
+        <buttons>
+            <Label fx:id="userName" prefHeight="17.0" prefWidth="299.0" text="Username:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="clockLabel" text="Clock">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+          <Button fx:id="logout" mnemonicParsing="false" onAction="#logOutonClick" prefHeight="25.0" prefWidth="100.0" text="Logout">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+        </buttons>
+      </ButtonBar>
+   </bottom>
+</BorderPane>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="main_pkg.User_4_WelcomePageController">
-   <children>
-      <Label fx:id="userName" layoutX="94.0" layoutY="53.0" text="Label" />
-   </children>
-</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="622.0" prefWidth="751.0" style="-fx-background-color: linear-gradient(to bottom,#6fbf9f , #fdbb3d,#22c1c4);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_PolicyAcknowledgementController">
+   <children>
+      <TextArea fx:id="textAreaEdit" editable="false" layoutX="16.0" layoutY="74.0" prefHeight="422.0" prefWidth="719.0" text="Policy Dissemination:&#10;&#10;Rule 1: All company policies will be compiled in a comprehensive policy handbook, available both in&#10; print and through a digital platform accessible to all employees.&#10;&#10;Rule 2: The policy handbook will be distributed to employees upon onboarding and updated regularly&#10; to reflect any changes.&#10;&#10;Rule 3: A digital copy of the policy handbook will be maintained on the company's intranet for easy &#10;access by all employees.&#10;&#10;2. Acknowledgment of Receipt:&#10;&#10;Rule 1: Upon receiving the policy handbook, each employee must sign and submit an&#10; acknowledgment form, confirming their receipt and understanding of the policies.&#10;&#10;Rule 2: Acknowledgment forms will be kept in individual employee files for record-keeping purposes.&#10;&#10;Rule 3: Acknowledgment forms will include a statement confirming that the employee has read,&#10; understood, and agreed to abide by the policies outlined in the handbook.&#10;&#10;3. Policy Review Meetings:&#10;&#10;Rule 1: Periodic policy review meetings will be conducted to discuss any updates, clarifications, or&#10; additions to existing policies.&#10;&#10;Rule 2: Attendance at policy review meetings may be mandatory for all employees, and&#10; non-attendance may be subject to appropriate action.&#10;&#10;Rule 3: Changes to policies will be communicated through multiple channels, including email, &#10;intranet announcements, and during team meetings.&#10;&#10;4. Employee Training on Policies:&#10;&#10;Rule 1: New employees will undergo a comprehensive orientation session that includes detailed &#10;training on company policies.&#10;&#10;Rule 2: Refresher training sessions on key policies will be conducted periodically for all employees.&#10;&#10;Rule 3: Training sessions may include interactive elements, quizzes, or case studies to ensure&#10; comprehension of policy content." />
+      <Button layoutX="592.0" layoutY="496.0" mnemonicParsing="false" onAction="#editOnClick" prefHeight="31.0" prefWidth="57.0" text="Edit" />
+      <Button layoutX="668.0" layoutY="496.0" mnemonicParsing="false" onAction="#submitOnClick" text="Submit" />
+      <Label layoutX="229.0" layoutY="34.0" prefHeight="21.0" prefWidth="402.0" text="Policy Acknowledgment">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font></Label>
+      <Button layoutX="26.0" layoutY="577.0" mnemonicParsing="false" onAction="#backOnClick" text="Back" />
+      <Button fx:id="logout" layoutX="657.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="83.0" text="Logout" />
+   </children>
+</AnchorPane>

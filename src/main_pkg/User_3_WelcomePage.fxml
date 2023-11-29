@@ -7,45 +7,42 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_WelcomePageController">
+<BorderPane fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="751.0" style="-fx-background-color: linear-gradient(to bottom, #07d4ed,#6f02e5);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_WelcomePageController">
    <top>
-      <MenuBar BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="43.0" prefWidth="751.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="View">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#caseAssignmentOnCLick" />
-                  <MenuItem mnemonicParsing="false" onAction="#checkClientDocument" text="Check Clients Documents from database" />
-                  <MenuItem mnemonicParsing="false" onAction="#SendTermsAndPolicToDocManagerOnClick" text="Send updated terms and policies to Doc Manager" />
-                  <MenuItem mnemonicParsing="false" onAction="#checkNotification" text="Check Notification" />
-                  <MenuItem mnemonicParsing="false" onAction="#caseChartOnClick" text="View Case Ratio Chart" />
-                  <MenuItem mnemonicParsing="false" onAction="#viewClintCaseRequests" text="View Client Case Requests" />
-                  <MenuItem mnemonicParsing="false" onAction="#reimbursementOnClick" text="Request Reimbursement Payment" />
-              <MenuItem mnemonicParsing="false" onAction="#termsOnClick" text="View Terms and Policy and Send Feedback" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Nevigator">
-            <items>
-              <MenuItem mnemonicParsing="false" onAction="#navigateToDashboard" text="Back" />
+                  <MenuItem mnemonicParsing="false" onAction="#laborComplianceOnClick" text="Labor Compliance" />
+                  <MenuItem mnemonicParsing="false" onAction="#assignTaskToWorkersOnClick" text="Assign Task To Workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewAndUpdateInformationAboutGarmentWorker" text="View and Update Information About Garment Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" text="Send Notification And Update to Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#enrollSelectedGarmentsWorkersSkill" text="Enroll Selected Garments Workers Skill" />
+                  <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfDeceivedGarmentWorkers" text="Create pie chart on the ratio of  deceived garment workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#senPDFToNGO" text="Send pdf of the information of garments workers who need support to NGO and government agency" />
+              <MenuItem mnemonicParsing="false" onAction="#createBudgetOfFinancialAidGarmentsWorkers" text="Create a budget of financial aid for the eligible garment workers" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
    <bottom>
-      <ButtonBar prefHeight="30.0" prefWidth="603.0" style="-fx-background-color: blue;" BorderPane.alignment="CENTER">
+      <ButtonBar prefHeight="30.0" prefWidth="603.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
          <buttons>
-            <Label fx:id="userName" text="UserName:">
+            <Label fx:id="userName" style="-fx-background-radius: 23;" text="UserName:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Label fx:id="clockLabel" prefHeight="17.0" prefWidth="495.0" text="Clock:">
+            <Label fx:id="clockLabel" prefHeight="17.0" prefWidth="495.0" style="-fx-background-radius: 12;" text="Clock:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Button fx:id="logout" minWidth="70.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" text="Logout">
+            <Button fx:id="logout" minWidth="70.0" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" style="-fx-background-color: red; -fx-background-radius: 14;" text="Logout">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -56,4 +53,10 @@
          </buttons>
       </ButtonBar>
    </bottom>
+   <center>
+      <ImageView fitHeight="551.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../bgImage/Untitled%20design%20(1).png" />
+         </image></ImageView>
+   </center>
 </BorderPane>

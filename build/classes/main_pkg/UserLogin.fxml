@@ -8,9 +8,11 @@
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="823.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.UserLoginController">
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="823.0" style="-fx-background-color: linear-gradient(to bottom, #a4bf6f,#2d82fd,#22c3ae);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.UserLoginController">
    <children>
       <Label layoutX="221.0" layoutY="315.0" prefHeight="27.0" prefWidth="91.0" text="User ID" textFill="WHITE">
          <font>
@@ -67,13 +69,21 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="306.0" layoutY="70.0" prefHeight="71.0" prefWidth="178.0" text="Welcome" textFill="#e30097">
+      <Label layoutX="306.0" layoutY="70.0" prefHeight="71.0" prefWidth="178.0" text="Welcome">
          <font>
             <Font name="OCR A Extended" size="41.0" />
          </font>
          <effect>
             <Glow />
          </effect>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#2d82fd" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
       <Label fx:id="clockLabel" layoutX="23.0" layoutY="602.0" prefHeight="31.0" prefWidth="337.0" text="Clock:" textFill="WHITE">
          <font>
