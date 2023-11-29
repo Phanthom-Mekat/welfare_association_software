@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="749.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d)linear-gradient(to bottom, #3f5efb,#46fc6d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_ViewAndUpdateInformationWorkersController">
+   <children>
+      <Label layoutX="34.0" layoutY="14.0" text="View Workers">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Line endX="438.0" layoutX="291.0" layoutY="47.0" startX="-280.0" strokeWidth="2.5" />
+      <TableView fx:id="tableView" layoutX="33.0" layoutY="120.0" prefHeight="420.0" prefWidth="702.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="126.0" text="Name" />
+          <TableColumn fx:id="phoneCol" prefWidth="132.0" text="Phone" />
+            <TableColumn fx:id="detailsCol" prefWidth="237.0" text="Details" />
+            <TableColumn fx:id="typeCol" prefWidth="84.0" text="Type" />
+            <TableColumn fx:id="genderCol" prefWidth="144.0" text="Gender" />
+        </columns>
+      </TableView>
+      <Button fx:id="loadButton" layoutX="525.0" layoutY="75.0" mnemonicParsing="false" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="205.0" text="Load workers " textFill="#4b21ff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Button layoutX="22.0" layoutY="564.0" mnemonicParsing="false" onAction="#backOnclick" prefHeight="31.0" prefWidth="86.0" text="Back" textFill="#5500ff" />
+      <Button fx:id="logout" layoutX="649.0" layoutY="564.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="86.0" text="Logout" textFill="#ff0f0f" />
+   </children>
+</AnchorPane>

@@ -74,10 +74,36 @@ public class User_3_LaborComplianceController implements Initializable {
 
     @FXML
     private void benefitManagementButton(ActionEvent event)throws IOException {
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_BenefitManagementRules.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        
     }
 
     @FXML
     private void policyAcknowledgementButton(ActionEvent event) throws IOException{
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_PolicyAcknowledgement.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        
     }
 
     @FXML

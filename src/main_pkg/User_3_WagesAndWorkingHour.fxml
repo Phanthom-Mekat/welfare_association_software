@@ -15,7 +15,7 @@
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Label>
-      <Button layoutX="26.0" layoutY="577.0" mnemonicParsing="false" onAction="#backOnClick" text="Back" />
-      <Button fx:id="logout" layoutX="657.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="83.0" text="Logout" />
+      <Button layoutX="26.0" layoutY="577.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="31.0" prefWidth="83.0" style="-fx-background-radius: 13; -fx-background-color: lightgreen;" text="Back" />
+      <Button fx:id="logout" layoutX="657.0" layoutY="572.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="83.0" style="-fx-background-radius: 13; -fx-background-color: red;" text="Logout" />
    </children>
 </AnchorPane>
