@@ -42,7 +42,7 @@ public class User_7_WelcomePageController implements Initializable {
              
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        selectgoalFxId.getItems().addAll("Task Management","Task Status Updates","Feedback Submission","Quality Control","Communication","Training Materials","Emergency","Earnings");
+        selectgoalFxId.getItems().addAll("Task Management","Task Status Updates","Feedback Submission","Quality Control","Communication","Training Materials","Complete Information","Earnings");
     }    
 
 
@@ -80,7 +80,7 @@ public class User_7_WelcomePageController implements Initializable {
 
     // Default case if none of the conditions match
     if (sceneA == null) {
-        sceneA = FXMLLoader.load(getClass().getResource("Emergency_Help_Scene.fxml"));
+        sceneA = FXMLLoader.load(getClass().getResource("User_7_Complete_Information_Scene.fxml"));
     }
 
     Scene sceneJ = new Scene(sceneA);
