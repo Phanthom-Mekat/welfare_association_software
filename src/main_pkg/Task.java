@@ -10,11 +10,19 @@ package main_pkg;
  */
 public class Task {
     private int TaskNo;
-    private String TaskName, TaskDetails, TaskOption;
+    private String TaskName, TaskDetails;
 
     @Override
     public String toString() {
-        return "Task{" + "TaskNo=" + TaskNo + ", TaskName=" + TaskName + ", TaskDetails=" + TaskDetails + ", TaskOption=" + TaskOption + '}';
+        return "Task{" + "TaskNo=" + TaskNo + ", TaskName=" + TaskName + ", TaskDetails=" + TaskDetails + '}';
+    }
+
+ 
+
+    public Task(int TaskNo, String TaskName, String TaskDetails) {
+        this.TaskNo = TaskNo;
+        this.TaskName = TaskName;
+        this.TaskDetails = TaskDetails;
     }
 
     public int getTaskNo() {
@@ -41,19 +49,5 @@ public class Task {
         this.TaskDetails = TaskDetails;
     }
 
-    public String getTaskOption() {
-        return TaskOption;
-    }
-
-    public void setTaskOption(String TaskOption) {
-        this.TaskOption = TaskOption;
-    }
-
-    public Task(int TaskNo, String TaskName, String TaskDetails, String TaskOption) {
-        this.TaskNo = TaskNo;
-        this.TaskName = TaskName;
-        this.TaskDetails = TaskDetails;
-        this.TaskOption = TaskOption;
-    }
 
 }

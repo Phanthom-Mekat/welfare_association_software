@@ -15,10 +15,9 @@
          </font></Text>
       <TableView fx:id="newTaskTable" layoutX="23.0" layoutY="89.0" prefHeight="252.0" prefWidth="553.0">
         <columns>
-          <TableColumn fx:id="newTaskNo" prefWidth="51.33331298828125" text="Task No" />
-          <TableColumn fx:id="newTaskName" prefWidth="169.99996948242188" text="Task Name" />
-            <TableColumn fx:id="newTaskDetails" prefWidth="232.66668701171875" text="Details" />
-            <TableColumn fx:id="addTaskOption" prefWidth="97.33333333333337" text="Add Task" />
+          <TableColumn fx:id="newTaskNo" prefWidth="86.6666259765625" text="Task No" />
+          <TableColumn fx:id="newTaskName" prefWidth="173.33334350585938" text="Task Name" />
+            <TableColumn fx:id="newTaskDetails" prefWidth="292.6666259765625" text="Details" />
         </columns>
       </TableView>
       <Button layoutX="23.0" layoutY="54.0" mnemonicParsing="false" onAction="#loadtasksOnClick" text="Load Tasks">
@@ -26,10 +25,11 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="logout" layoutX="273.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
+      <Button fx:id="logout" layoutX="23.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
+      <Button layoutX="273.0" layoutY="353.0" mnemonicParsing="false" onAction="#addTaskOnClick" prefHeight="25.0" prefWidth="78.0" text="Add Task" />
    </children>
 </AnchorPane>

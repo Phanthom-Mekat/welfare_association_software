@@ -1,6 +1,11 @@
 
 package main_pkg;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Workers implements Serializable{
     private String name;
@@ -16,7 +21,40 @@ public class Workers implements Serializable{
         this.clientType = clientType;
         this.gender = gender;
     }
+    public static ArrayList<Workers> ReadAssignTaskToWorkers(){
+       File f = null;
+       FileInputStream fis = null;
+       ObjectInputStream ois = null;
+       ArrayList<Workers> hours = new ArrayList<>();
+       try{
+           fis = new FileInputStream("NewTask.bin");
+           ois = new ObjectInputStream(fis);
+           while(true){
+               try{
+                   Workers client = (Workers) ois.readObject();
+                   
+                   hours.add(client);
+               }
+               catch(EOFException e){
+                   break;
+               }
+                        
+           }
+       }
+       catch(Exception e){
+           e.printStackTrace();
+       }
+       finally{
+           try{
+               if(ois!=null) ois.close();
+           }
+           catch(Exception e){
+               e.printStackTrace();
+           }
+       }
 
+       return hours;
+   }
 
     public String getName() {
         return name;

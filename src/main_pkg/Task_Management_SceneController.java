@@ -1,12 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
-package main_pkg;
 
+package main_pkg;
+import javafx.scene.control.Label;
+
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -37,8 +40,6 @@ public class Task_Management_SceneController implements Initializable {
     @FXML
     private TableColumn<Task,String> newTaskDetails;
     @FXML
-    private TableColumn<Task,String> addTaskOption;
-    @FXML
     private Button logout;
 
     /**
@@ -49,27 +50,51 @@ public class Task_Management_SceneController implements Initializable {
         newTaskNo.setCellValueFactory(new PropertyValueFactory<Task, Integer>("TaskNo"));
         newTaskName.setCellValueFactory(new PropertyValueFactory<Task, String>("TaskName"));
         newTaskDetails.setCellValueFactory(new PropertyValueFactory<Task,String>("TaskDetails"));
-        addTaskOption.setCellValueFactory(new PropertyValueFactory<Task, String>("TaskOption"));
+
     }    
 
     @FXML
     private void loadtasksOnClick(ActionEvent event) {
-       Task c1 = new Task(123,"Sweing","abcd","Y/N");
-       Task c2 = new Task(456,"Cut Off","bcde","Y/N");
-       Task c3 = new Task(567,"Supply","cdef","Y/N");
-       Task c4 = new Task(678,"New","defg","Y/N");
-       Task c5 = new Task(789,"Submit Only","efgh","Y/N");
-       
-        ObservableList<Task> taskList  = FXCollections.observableArrayList(); //FX not Fx
-        System.out.println(taskList);
-        taskList.add(c1);
-        taskList.add(c2);
-        taskList.add(c3);
-        taskList.add(c4);
-        taskList.add(c5);
-        newTaskTable.setItems(taskList);   //add on list
-        System.out.println(taskList);
+        ObservableList<Task> taskList = FXCollections.observableArrayList();
+        newTaskTable.setPlaceholder(new Label(""));
+        File f = null;
+        FileInputStream fis = null;
+        DataInputStream dis = null;
+        String str="";
+        try {
+            f = new File("NewTaskData.bin");
+            if(!f.exists()){
+                newTaskTable.setPlaceholder(new Label("Oops! NewTaskData.bin binary file does not exist..."));
+            }
+            else{
+                fis = new FileInputStream(f);
+                dis = new DataInputStream(fis);
+                while (dis.available() > 0) {
+                int taskNo = dis.readInt();
+                String taskName = dis.readUTF();
+                String taskDetails = dis.readUTF();
+
+ 
+            Task task = new Task(taskNo, taskName, taskDetails);
+            taskList.add(task);
+                }
+                newTaskTable.setItems(taskList);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Task_Management_SceneController.class.getName()).log(Level.SEVERE, null, ex); 
+            Label errorMessage = new Label("An error occurred while loading tasks.");
+             newTaskTable.setPlaceholder(errorMessage);
+
+        } finally {
+            try {
+                if(dis != null) dis.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Task_Management_SceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }          
     }
+
+ 
 
     @FXML
     private void backButtonOnClick(ActionEvent event) {
@@ -88,4 +113,10 @@ public class Task_Management_SceneController implements Initializable {
 
  
 } 
+
+    @FXML
+    private void addTaskOnClick(ActionEvent event) {
+        
+    
+ }
 }

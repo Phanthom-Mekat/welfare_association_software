@@ -17,7 +17,7 @@
         <columns>
           <TableColumn fx:id="acceptedTaskNo" prefWidth="75.0" text="Task No" />
           <TableColumn fx:id="acceptedTaskName" prefWidth="207.33334350585938" text="Task Name" />
-            <TableColumn fx:id="acceptedTaskStatus" prefWidth="260.0" text="Task Status(Complete or Not) " />
+            <TableColumn fx:id="acceptedTaskStatus" prefWidth="260.0" text="Task Status(Completed) " />
         </columns>
       </TableView>
       <Text layoutX="256.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accepted Task">
