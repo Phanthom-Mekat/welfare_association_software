@@ -1,11 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Task_Management_SceneController">
-    
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom,#097ae6,#1ddbfd,#de220f);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Task_Management_SceneController">
+   <children>
+      <Text layoutX="204.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task Management" textAlignment="JUSTIFY" underline="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></Text>
+      <TableView fx:id="newTaskTable" layoutX="23.0" layoutY="89.0" prefHeight="252.0" prefWidth="553.0">
+        <columns>
+          <TableColumn fx:id="newTaskNo" prefWidth="51.33331298828125" text="Task No" />
+          <TableColumn fx:id="newTaskName" prefWidth="169.99996948242188" text="Task Name" />
+            <TableColumn fx:id="newTaskDetails" prefWidth="232.66668701171875" text="Details" />
+            <TableColumn fx:id="addTaskOption" prefWidth="97.33333333333337" text="Add Task" />
+        </columns>
+      </TableView>
+      <Button layoutX="23.0" layoutY="54.0" mnemonicParsing="false" onAction="#loadtasksOnClick" text="Load Tasks">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="logout" layoutX="273.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

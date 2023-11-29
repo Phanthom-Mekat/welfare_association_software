@@ -4,9 +4,18 @@
  */
 package main_pkg;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -15,12 +24,36 @@ import javafx.fxml.Initializable;
  */
 public class Emergency_Help_SceneController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private ComboBox<String> selectEmergencyContractFxId;
+    @FXML
+    private Button logout;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        selectEmergencyContractFxId.getItems().addAll("Associate Leader","Healthcare Providers");
     }    
+
+    @FXML
+    private void emergencyContractButtonOnClick(ActionEvent event) {
+    }
+
+    @FXML
+    private void backButtonOnClick(ActionEvent event) {
+        try {
+
+    
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_7_WelcomePage.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+
+ 
+} 
     
 }
