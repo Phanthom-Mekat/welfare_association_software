@@ -75,35 +75,15 @@ public class User_3_WelcomePageController implements Initializable {
 
     @FXML
     private void viewAndUpdateInformationAboutGarmentWorker(ActionEvent event) throws IOException{
-        try {
-
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_ViewAndUpdateInformationWorkers.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-
-        Stage currentStage = (Stage) logout.getScene().getWindow();
-        currentStage.setScene(scene);
-    } catch (IOException e) {
-        e.printStackTrace();
-    } 
+        Parent parent = FXMLLoader.load(getClass().getResource("User_3_ViewAndUpdateInformationWorkers.fxml"));
+        dashboard.setCenter(parent);   
     }
 
     @FXML
     private void sendNotificationUpdateToWorker(ActionEvent event)throws IOException {
-        try {
-
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource( "User_3_CheckNotification.fxml"   ));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-
-        Stage currentStage = (Stage) logout.getScene().getWindow();
-        currentStage.setScene(scene);
-    } catch (IOException e) {
-        e.printStackTrace();
-    }         
-    
+        Parent parent = FXMLLoader.load(getClass().getResource("User_3_CheckNotification.fxml"));
+        dashboard.setCenter(parent);          
+        
     }
 
     @FXML
