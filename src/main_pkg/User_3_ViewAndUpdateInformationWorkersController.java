@@ -1,5 +1,8 @@
 package main_pkg;
 
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -58,27 +61,59 @@ public class User_3_ViewAndUpdateInformationWorkersController implements Initial
 
     @FXML
     private void loadButtonOnClick(ActionEvent event)throws IOException {
-        Workers c1 = new Workers("mekat",23456789,"Worker","Worker","Male");
-        Workers c2 = new Workers("Hossain",012345,"Worker","Worker","Male");
-        Workers c3 = new Workers("Nirjhar",123534,"Worker","Worker","Male");
-        Workers c4 = new Workers("Riyaj",1243,"Worker","Worker","Male");
-        Workers c5 = new Workers("Tahmid",12343,"Worker","Worker","Male");
-        Workers c6 = new Workers("Samin",3423,"Worker","Worker","Male");
-        Workers c7 = new Workers("Maruf",423,"Worker","Pok","Male");
+        ObservableList<Workers> workersList = FXCollections.observableArrayList();
+        tableView.setPlaceholder(new Label(""));
+        File f = null;
+        FileInputStream fis = null;
+        DataInputStream dis = null;
+        String str="";
+        int MAX_STRING_LENGTH = 0;
         
+        try {
+            f = new File("CompleteInformation.bin");
+            if(!f.exists()){
+                tableView.setPlaceholder(new Label("Oops! NewTaskData.bin binary file does not exist..."));
+            }
+            else{
+                int expectedBytesForOneWorker = 2 * Integer.BYTES + 4 * MAX_STRING_LENGTH;
+                fis = new FileInputStream(f);
+                dis = new DataInputStream(fis);
+               
+                while (dis.available() >= expectedBytesForOneWorker) {
+                    System.out.println("Available bytes before reading name: " + dis.available());
+                    String name = dis.readUTF();
+                    System.out.println("Available bytes before reading phonenumber: " + dis.available());
+                    int phonenumber = dis.readInt();
+                    System.out.println("Available bytes before reading details: " + dis.available());
+                    String details = dis.readUTF();
+                    System.out.println("Available bytes before reading clientType: " + dis.available());
+                    String clientType = dis.readUTF();
+                    System.out.println("Available bytes before reading gender: " + dis.available());
+                    String gender = dis.readUTF();
+
+
+
+
+ 
+            Workers worker = new Workers(name, phonenumber, details,clientType,gender);
+            workersList.add(worker);
+                }
+                tableView.setItems(workersList);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(User_3_ViewAndUpdateInformationWorkersController.class.getName()).log(Level.SEVERE, null, ex); 
+            Label errorMessage = new Label("An error occurred while loading tasks.");
+             tableView.setPlaceholder(errorMessage);
+
+        } finally {
+            try {
+                if(dis != null) dis.close();
+            } catch (IOException ex) {
+                Logger.getLogger(User_3_ViewAndUpdateInformationWorkersController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
         
-        
-        ObservableList<Workers> workersList  = FXCollections.observableArrayList(); 
-        System.out.println(workersList);
-        workersList.add(c1);
-        workersList.add(c2);
-        workersList.add(c3);
-        workersList.add(c4);
-        workersList.add(c5);
-        workersList.add(c6);
-        workersList.add(c7);
-        tableView.setItems(workersList);   //add on list
-        System.out.println(workersList);
+
     }
 
 

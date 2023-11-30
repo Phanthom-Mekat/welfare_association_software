@@ -90,7 +90,7 @@ public class User_7_Complete_Information_SceneController implements Initializabl
             dos.writeUTF(detailsCol.getText());
             dos.writeUTF(typeCol.getValue());
             dos.writeUTF(genderCol.getValue());
-            
+
         } catch (IOException ex) {
             Logger.getLogger(User_3_AssignTaskToWorkersController.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
