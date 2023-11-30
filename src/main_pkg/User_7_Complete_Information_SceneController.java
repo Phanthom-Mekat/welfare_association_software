@@ -80,16 +80,19 @@ public class User_7_Complete_Information_SceneController implements Initializabl
         DataOutputStream dos = null;
         
         try {
-            f = new File("CompleteInformation.bin");
-            if(f.exists()) fos = new FileOutputStream(f,true);
-            else fos = new FileOutputStream(f);
-                 dos = new DataOutputStream(fos);
-            
+            f = new File("CompleteInformation1.bin");
+            if (!f.exists()) {
+                fos = new FileOutputStream(f);
+            } else {
+                fos = new FileOutputStream(f, true);
+            }
+            dos = new DataOutputStream(fos);
+
             dos.writeUTF(nameCol.getText());
             dos.writeInt(Integer.parseInt(phoneCol.getText()));
             dos.writeUTF(detailsCol.getText());
-            dos.writeUTF(typeCol.getValue());
-            dos.writeUTF(genderCol.getValue());
+            dos.writeUTF(typeCol.getValue() != null ? typeCol.getValue() : "");
+            dos.writeUTF(genderCol.getValue() != null ? genderCol.getValue() : "");
 
         } catch (IOException ex) {
             Logger.getLogger(User_3_AssignTaskToWorkersController.class.getName()).log(Level.SEVERE, null, ex);
@@ -103,8 +106,8 @@ public class User_7_Complete_Information_SceneController implements Initializabl
         phoneCol.clear();
         nameCol.clear();
         detailsCol.clear();
-        typeCol.setValue(null);
-        genderCol.setValue(null);
+//        typeCol.setValue(null);
+//        genderCol.setValue(null);
     }        
       
     

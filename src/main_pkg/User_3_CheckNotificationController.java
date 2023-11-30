@@ -1,8 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
+
 package main_pkg;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -32,25 +32,21 @@ public class User_3_CheckNotificationController implements Initializable {
     @FXML
     private ComboBox<String> selectFileComboBox;
     @FXML
-    private Button loadButton;
-    @FXML
     private TextArea textArea;
     @FXML
     private Button logout;
+    @FXML
+    private Button sendButton;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+         selectFileComboBox.getItems().addAll("Deadeline","Clothing","Emergency","Information");
     }    
 
-    @FXML
-    private void loadButtonClick(ActionEvent event){
-        
-        
-    }
 
     @FXML
     private void backOnclick(ActionEvent event) throws IOException{
@@ -83,6 +79,35 @@ public class User_3_CheckNotificationController implements Initializable {
     } catch (IOException e) {
         e.printStackTrace();
     }        
+    }
+
+    @FXML
+    private void sendButtonClick(ActionEvent event) {
+        File f = null;
+        FileOutputStream fos = null;
+        DataOutputStream dos = null;
+        
+        try {
+            f = new File("notification.bin");
+            if(f.exists()) fos = new FileOutputStream(f,true);
+            else fos = new FileOutputStream(f);
+                 dos = new DataOutputStream(fos);
+            
+            dos.writeUTF(selectFileComboBox.getValue());
+            dos.writeUTF(textArea.getText());
+
+        } catch (IOException ex) {
+            Logger.getLogger(User_3_CheckNotificationController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(dos != null) dos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(User_3_CheckNotificationController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        textArea.clear();
+        
+        
     }
     
 }
