@@ -1,12 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package main_pkg;
 
+import java.io.DataInputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,32 +18,57 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author Asus
- */
+
 public class Workers_Communication_SceneController implements Initializable {
 
     @FXML
     private TextArea workersCommunicationTextArea;
     @FXML
-    private Button workersMessageButtonOnClick;
-    @FXML
     private Button logout;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
 
     @FXML
-    private void loadMessagesOnClick(ActionEvent event) {
-    }
+    private void loadMessagesOnClick(ActionEvent event) throws IOException {
+        workersCommunicationTextArea.setText("");
+        File f = null;
+        FileInputStream fis = null;
+        DataInputStream dis = null;
+        String str="";
+        try {
+            f = new File("notification.bin");
+            if(!f.exists()){
+                workersCommunicationTextArea.setText("Oops! notification.bin binary file does not exist...");
+            }
+            else{
+                
+                fis = new FileInputStream(f);
+                dis = new DataInputStream(fis);
+                while(true){
+                    str+= "NotificationTyepe:"
+                        +dis.readUTF()
+                        +"; Details :"+dis.readUTF()
+                        +"\n";
 
+                }
+
+            }
+        } catch (IOException ex) {
+            workersCommunicationTextArea.setText(str);
+            Logger.getLogger(Workers_Communication_SceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(dis != null) dis.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Workers_Communication_SceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    
+    }
     @FXML
     private void backButtonOnClick(ActionEvent event) {
         try {
@@ -60,5 +86,4 @@ public class Workers_Communication_SceneController implements Initializable {
 
  
 } 
-    
-}
+}  

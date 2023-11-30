@@ -47,4 +47,8 @@ public class Accepted_Task {
         this.TaskStatus = TaskStatus;
     }
 
+    void setData(Task selectedTask) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

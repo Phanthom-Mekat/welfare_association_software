@@ -9,15 +9,24 @@ package main_pkg;
  * @author Asus
  */
 public class Task {
+
+    static void setData(Task selectedTask) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     private int TaskNo;
     private String TaskName, TaskDetails;
-
+    
     @Override
     public String toString() {
         return "Task{" + "TaskNo=" + TaskNo + ", TaskName=" + TaskName + ", TaskDetails=" + TaskDetails + '}';
     }
+    
+    public void setTask(String task) {    //Data set
+        this.TaskNo = TaskNo;
+        this.TaskName= TaskName;
+        this.TaskDetails= TaskDetails;
+    }
 
- 
 
     public Task(int TaskNo, String TaskName, String TaskDetails) {
         this.TaskNo = TaskNo;
