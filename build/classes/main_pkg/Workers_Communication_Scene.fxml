@@ -12,18 +12,13 @@
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Text>
-      <TextArea fx:id="workersCommunicationTextArea" layoutX="17.0" layoutY="118.0" prefHeight="226.0" prefWidth="565.0" />
-      <Button fx:id="workersMessageButtonOnClick" layoutX="253.0" layoutY="352.0" mnemonicParsing="false" text="Send Message">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Button>
+      <TextArea fx:id="workersCommunicationTextArea" editable="false" layoutX="17.0" layoutY="118.0" prefHeight="226.0" prefWidth="565.0" />
       <Button layoutX="17.0" layoutY="81.0" mnemonicParsing="false" onAction="#loadMessagesOnClick" text="Load Messages">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="logout" layoutX="17.0" layoutY="353.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
+      <Button fx:id="logout" layoutX="262.0" layoutY="352.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

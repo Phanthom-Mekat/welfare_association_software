@@ -4,17 +4,22 @@
  */
 package main_pkg;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -29,36 +34,30 @@ public class Patient_Assignment_SceneController implements Initializable {
     private TableColumn<New_Patient,String> assignPatientName;
     @FXML
     private TableColumn<New_Patient,String> assignPatientGender;
-    private TableColumn<New_Patient,String> PatientGender;
     @FXML
     private TableView<New_Patient> patientAssignmentTableView;
     @FXML
-    private Button logout;
+    private TableColumn<New_Patient, String> assignPatientDetails;    
     @FXML
-    private TableColumn<?, ?> assignPatientDetails;
+    private Button logout;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         assignPatientNo.setCellValueFactory(new PropertyValueFactory<New_Patient, Integer>("PatientNo"));
         assignPatientName.setCellValueFactory(new PropertyValueFactory<New_Patient, String>("PatientName"));
         assignPatientGender.setCellValueFactory(new PropertyValueFactory<New_Patient,String>("PatientGender"));
-        PatientGender.setCellValueFactory(new PropertyValueFactory<New_Patient, String>("TaskOption"));
+        assignPatientDetails.setCellValueFactory(new PropertyValueFactory<New_Patient, String>("PatientDetails"));
     }   
 
-    @FXML
-    private void addNewPatientOnClick(ActionEvent event) {
-    }
 
     @FXML
     private void newPatientLoadOnClick(ActionEvent event) {
-       New_Patient c1 = new New_Patient(123,"James","Male","Y/N");
-       New_Patient c2 = new New_Patient(456,"Thomas","Male","Y/N");
-       New_Patient c3 = new New_Patient(567,"Jack","Male","Y/N");
-       New_Patient c4 = new New_Patient(678,"Henry","Female","Y/N");
-       New_Patient c5 = new New_Patient(789,"Emma","Female","Y/N");
+       New_Patient c1 = new New_Patient(1001,"James","Male","Fever");
+       New_Patient c2 = new New_Patient(1002,"Thomas","Male","Emergency");
+       New_Patient c3 = new New_Patient(1003,"Jack","Male","Operation");
+       New_Patient c4 = new New_Patient(1004,"Henry","Female","Hard Injury");
+       New_Patient c5 = new New_Patient(1005,"Emma","Female","Doctor Meet");
        
         ObservableList<New_Patient> patientList  = FXCollections.observableArrayList(); //FX not Fx
         System.out.println(patientList);
@@ -73,6 +72,20 @@ public class Patient_Assignment_SceneController implements Initializable {
 
     @FXML
     private void backButtonOnClick(ActionEvent event) {
+         try {
+
+    
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_8_WelcomePage.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+
+ 
+} 
 
 }

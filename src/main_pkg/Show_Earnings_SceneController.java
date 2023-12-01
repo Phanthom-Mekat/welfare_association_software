@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -41,8 +42,23 @@ public class Show_Earnings_SceneController implements Initializable {
     }    
 
     @FXML
-    private void nextButtonOnClick(ActionEvent event) {
+    private void nextButtonOnClick(ActionEvent event) throws IOException {
+        
+        String a=earningTypeFxId.getValue().toString();
+        Parent sceneA;
+        if(a=="New Balance"){
+          sceneA=FXMLLoader.load(getClass().getResource("New_Balance_Scene.fxml"));  
+        }
+        else{
+          sceneA=FXMLLoader.load(getClass().getResource("Withdrawal_History_Scene.fxml"));
+        }
+        
+        Scene sceneB=new Scene(sceneA);
+        Stage stg=(Stage)((Node)event.getSource()).getScene().getWindow();
+        stg.setScene(sceneB);
+        stg.show();
     }
+    
 
     @FXML
     private void backButtonOnClick(ActionEvent event) {

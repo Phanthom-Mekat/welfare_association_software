@@ -27,23 +27,22 @@ import javafx.stage.Stage;
  * @author Asus
  */
 public class Task_Status_Updates_SceneController implements Initializable {
-
     @FXML
-    private TableColumn<Accepted_Task,Integer> acceptedTaskNo;
+    private Button logout;
     @FXML
-    private TableColumn<Accepted_Task,String> acceptedTaskName;
+    private TableColumn<Accepted_Task,String > acceptedTaskStatus;
     @FXML
-    private TableColumn<Accepted_Task,String> acceptedTaskStatus;
+    private TableColumn<Accepted_Task, String> acceptedTaskName;
     @FXML
     private TableView<Accepted_Task> acceptedTaskTable;
     @FXML
-    private Button logout;
+    private TableColumn<Accepted_Task,Integer> acceptedTaskNo;
 
-    /**
-     * Initializes the controller class.
-     */
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+  
        
         acceptedTaskNo.setCellValueFactory(new PropertyValueFactory<Accepted_Task, Integer>("Task"));
         acceptedTaskName.setCellValueFactory(new PropertyValueFactory<Accepted_Task, String>("TaskName"));
@@ -52,9 +51,11 @@ public class Task_Status_Updates_SceneController implements Initializable {
 
     }    
 
+    
     @FXML
     private void loadTaskOnClick(ActionEvent event) {
-       Accepted_Task c1 = new Accepted_Task(123,"Sweing","accepted");
+    
+       Accepted_Task c1 = new Accepted_Task(123,"Sweing","accepted");      
        Accepted_Task c2 = new Accepted_Task(456,"Cut Off","accepted");
        Accepted_Task c3 = new Accepted_Task(567,"Supply","pending");
        Accepted_Task c4 = new Accepted_Task(678,"New","completed");
@@ -65,9 +66,9 @@ public class Task_Status_Updates_SceneController implements Initializable {
        acceptedtaskList.add(c1);
        acceptedtaskList.add(c2);
        acceptedtaskList.add(c3);
-       acceptedtaskList.add(c4);
+       acceptedtaskList.add(c4);       
        acceptedtaskList.add(c5);
-       acceptedTaskTable.setItems(acceptedtaskList);   //add on list
+       acceptedTaskTable.setItems(acceptedtaskList);   
        System.out.println(acceptedtaskList);     
         
     }

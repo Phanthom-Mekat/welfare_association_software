@@ -114,10 +114,19 @@ public class Task_Management_SceneController implements Initializable {
  
 } 
 
-    @FXML
-    private void addTaskOnClick(ActionEvent event) {
-    }
+    private void addTaskOnClick(ActionEvent event) throws IOException {
+        
+        Task selectedTask = newTaskTable.getSelectionModel().getSelectedItem();
+        
+//        // Switch to Scene2 and pass data to Controller2
+////        FXMLLoader loader = new FXMLLoader(getClass().getResource("Task_Status_Updates_Scene.fxml"));
+////        Parent root = loader.load();
+//        Accepted_Task Accepted_Task = loader.getController();
+        Task.setData(selectedTask);
+      
 
+        // Code to switch scenes...
+    }
         
     
  

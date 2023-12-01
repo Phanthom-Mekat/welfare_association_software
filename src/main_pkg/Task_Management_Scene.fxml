@@ -30,6 +30,5 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="273.0" layoutY="353.0" mnemonicParsing="false" onAction="#addTaskOnClick" prefHeight="25.0" prefWidth="78.0" text="Add Task" />
    </children>
 </AnchorPane>
