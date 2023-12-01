@@ -1,10 +1,12 @@
 package main_pkg;
 
+
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,33 +25,43 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+/**
+ * FXML Controller class
+ *
+ * @author DCL
+ */
+public class User_3_ViewInterviewController implements Initializable {
 
-public class User_3_ShowFeedbackController implements Initializable {
-
     @FXML
-    private TableView<Feedback> feedbackTableView;
+    private TableView<Interview> tableview;
     @FXML
-    private TableColumn<Feedback, String> feedbackName;
+    private TableColumn<Interview, LocalDate> timeTableColumn;
     @FXML
-    private TableColumn<Feedback, Integer> feedbackNumber;
+    private TableColumn<Interview, String> interviewerNameCol;
     @FXML
-    private TableColumn<Feedback, String> feedbackText;
+    private TableColumn<Interview, String> mediaNameCol;
+    @FXML
+    private TableColumn<Interview, String> purposeCol;
+    @FXML
+    private TableColumn<Interview,String> durationCol;
     @FXML
     private Button logout;
 
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        feedbackName.setCellValueFactory(new PropertyValueFactory<Feedback,String>("feedbackName"));
-        feedbackNumber.setCellValueFactory(new PropertyValueFactory<Feedback,Integer>("feedbackNumber"));
-        feedbackText.setCellValueFactory(new PropertyValueFactory<Feedback,String>("feedbackText"));
+        interviewerNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        mediaNameCol.setCellValueFactory(new PropertyValueFactory<>("media"));
+        timeTableColumn.setCellValueFactory(new PropertyValueFactory<>("date"));
+        purposeCol.setCellValueFactory(new PropertyValueFactory<>("purpose"));
+        durationCol.setCellValueFactory(new PropertyValueFactory<>("duration"));
         
     }    
 
     @FXML
-    private void loadFeedback(ActionEvent event) throws IOException{
-        ObservableList<Feedback> feedbackList = FXCollections.observableArrayList();
-        feedbackTableView.setPlaceholder(new Label(""));
+    private void checkappoinmentButtonOnClick(ActionEvent event) {
+        ObservableList<Interview> interviewList = FXCollections.observableArrayList();
+        tableview.setPlaceholder(new Label(""));
         File f = null;
         FileInputStream fis = null;
         DataInputStream dis = null;
@@ -57,9 +69,9 @@ public class User_3_ShowFeedbackController implements Initializable {
         int MAX_STRING_LENGTH = 0;
         
         try {
-            f = new File("Feedback.bin");
+            f = new File("Interview.bin");
             if(!f.exists()){
-                feedbackTableView.setPlaceholder(new Label("Oops! Feedback.bin binary file does not exist..."));
+                tableview.setPlaceholder(new Label("Oops! Interview.bin binary file does not exist..."));
             }
             else{
                 int expectedBytesForOneWorker = 2 * Integer.BYTES + 4 * MAX_STRING_LENGTH;
@@ -68,33 +80,37 @@ public class User_3_ShowFeedbackController implements Initializable {
                
                 while (dis.available() >= expectedBytesForOneWorker) {
                     String name = dis.readUTF();
-                    int number = dis.readInt();
-                    String feedbacktext = dis.readUTF();
-  
+                    String media = dis.readUTF();
+                    String date = dis.readUTF();
+                    String purpose = dis.readUTF();
+                    int duration = dis.readInt();  
  
-            Feedback feedback = new Feedback(name,number,feedbacktext);
-            feedbackList.add(feedback);
+            Interview interview = new Interview(name,media,date,purpose,duration);
+            interviewList.add(interview);
                 }
-                feedbackTableView.setItems(feedbackList);
+                tableview.setItems(interviewList);
             }
         } catch (IOException ex) {
-            Logger.getLogger(User_3_ShowFeedbackController.class.getName()).log(Level.SEVERE, null, ex); 
+            Logger.getLogger(User_3_ViewInterviewController.class.getName()).log(Level.SEVERE, null, ex); 
             Label errorMessage = new Label("An error occurred while loading tasks.");
-             feedbackTableView.setPlaceholder(errorMessage);
+             tableview.setPlaceholder(errorMessage);
 
         } finally {
             try {
                 if(dis != null) dis.close();
             } catch (IOException ex) {
-                Logger.getLogger(User_3_ShowFeedbackController.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(User_3_ViewInterviewController.class.getName()).log(Level.SEVERE, null, ex);
             }
         }        
+        
+        
+    
         
         
     }
 
     @FXML
-    private void backOnClick(ActionEvent event)throws IOException {
+    private void backOnCLick(ActionEvent event) throws IOException{
         try {
 
 
@@ -106,7 +122,7 @@ public class User_3_ShowFeedbackController implements Initializable {
         currentStage.setScene(scene);
     } catch (IOException e) {
         e.printStackTrace();
-    }
+    }         
     }
 
     @FXML
@@ -122,8 +138,7 @@ public class User_3_ShowFeedbackController implements Initializable {
         currentStage.setScene(scene);
     } catch (IOException e) {
         e.printStackTrace();
-    }
-        
+    } 
     }
     
 }

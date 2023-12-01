@@ -107,11 +107,6 @@ public class User_3_WelcomePageController implements Initializable {
         
     }
 
-    @FXML
-    private void enrollSelectedGarmentsWorkersSkill(ActionEvent event) throws IOException{
-      
-        
-    }
 
     @FXML
     private void createPieChartOnTheRatioOfDeceivedGarmentWorkers(ActionEvent event)throws IOException {
@@ -156,6 +151,22 @@ public class User_3_WelcomePageController implements Initializable {
     } catch (IOException e) {
         e.printStackTrace();
     }     
+    }
+
+    @FXML
+    private void viewInterviewOnClick(ActionEvent event) {
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_ViewInterview.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }        
     }
 
     

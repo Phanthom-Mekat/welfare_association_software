@@ -4,14 +4,19 @@
  */
 package main_pkg;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -40,43 +45,66 @@ public class User_4_WelcomePageController implements Initializable {
     }    
 
     @FXML
-    private void generateInvoicesOnClick(ActionEvent event) {
+    private void logOutonClick(ActionEvent event) {
+      try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("UserLogin.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
     }
 
     @FXML
-    private void SubmitAuditReport(ActionEvent event) {
+    private void requestInterviewOnCLick(ActionEvent event) throws IOException {
+      try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_4_RequestInterview.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }    
     }
 
     @FXML
-    private void PayRollOnClick(ActionEvent event) {
+    private void uploadContentOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void ProcessExpenseReimbursementOnCLick(ActionEvent event) {
+    private void updatePublishNews(ActionEvent event) {
     }
 
     @FXML
-    private void overtimedataanalysisfromPayrollONClick(ActionEvent event) {
+    private void storyGatherOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void termsandpolicyOnClick(ActionEvent event) {
+    private void connectWithWorkers(ActionEvent event) {
     }
 
     @FXML
-    private void ReimbursementReportsOnClick(ActionEvent event) {
+    private void reportingOnClick(ActionEvent event) {
     }
 
     @FXML
-    private void TrackAddWorkHrsOnClk(ActionEvent event) {
+    private void viewResource(ActionEvent event) {
     }
 
+    @FXML
+    private void viewSurveyOnCLick(ActionEvent event) {
+    }
     @FXML
     private void navigateToDashboard(ActionEvent event) {
-    }
-
-    @FXML
-    private void logOutonClick(ActionEvent event) {
     }
     
 }

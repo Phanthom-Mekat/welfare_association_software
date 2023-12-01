@@ -16,16 +16,16 @@
    <top>
       <MenuBar prefHeight="43.0" prefWidth="751.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="View">
+          <Menu mnemonicParsing="false" style="-fx-background-color: lightgreen; -fx-background-radius: 16;" text="View">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#laborComplianceOnClick" text="Labor Compliance" />
-                  <MenuItem mnemonicParsing="false" onAction="#assignTaskToWorkersOnClick" text="Assign Task To Workers" />
-                  <MenuItem mnemonicParsing="false" onAction="#viewAndUpdateInformationAboutGarmentWorker" text="View and Update Information About Garment Worker" />
-                  <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" text="Send Notification And Update to Worker" />
-                  <MenuItem mnemonicParsing="false" onAction="#enrollSelectedGarmentsWorkersSkill" text="Enroll Selected Garments Workers Skill" />
-                  <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfDeceivedGarmentWorkers" text="Create pie chart on the ratio of  deceived garment workers" />
-                  <MenuItem mnemonicParsing="false" onAction="#showFeedbackOfTheWorkers" text="Show feedback Of The Workers" />
-              <MenuItem mnemonicParsing="false" onAction="#createBudgetOfFinancialAidGarmentsWorkers" text="Create a budget of financial aid for the eligible garment workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#laborComplianceOnClick" style="-fx-background-color: yellow; -fx-background-radius: 14;" text="Labor Compliance" />
+                  <MenuItem mnemonicParsing="false" onAction="#assignTaskToWorkersOnClick" style="-fx-background-color: yellow; -fx-background-radius: 12;" text="Assign Task To Workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewAndUpdateInformationAboutGarmentWorker" style="-fx-background-color: yellow; -fx-background-radius: 12;" text="View and Update Information About Garment Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" style="-fx-background-color: yellow; -fx-background-radius: 21;" text="Send Notification And Update to Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewInterviewOnClick" style="-fx-background-color: yellow; -fx-background-radius: 23;" text="View Interviews" />
+                  <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfDeceivedGarmentWorkers" style="-fx-background-color: yellow; -fx-background-radius: 14;" text="Create pie chart on the ratio of  deceived garment workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#showFeedbackOfTheWorkers" style="-fx-background-color: yellow; -fx-background-radius: 15;" text="Show feedback Of The Workers" />
+              <MenuItem mnemonicParsing="false" onAction="#createBudgetOfFinancialAidGarmentsWorkers" style="-fx-background-color: yellow; -fx-background-radius: 15;" text="Create a budget of financial aid for the eligible garment workers" />
             </items>
           </Menu>
         </menus>
