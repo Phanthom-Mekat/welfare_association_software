@@ -21,12 +21,6 @@ public class Task {
         return "Task{" + "TaskNo=" + TaskNo + ", TaskName=" + TaskName + ", TaskDetails=" + TaskDetails + '}';
     }
     
-    public void setTask(String task) {    //Data set
-        this.TaskNo = TaskNo;
-        this.TaskName= TaskName;
-        this.TaskDetails= TaskDetails;
-    }
-
 
     public Task(int TaskNo, String TaskName, String TaskDetails) {
         this.TaskNo = TaskNo;

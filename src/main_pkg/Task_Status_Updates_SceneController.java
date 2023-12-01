@@ -28,53 +28,50 @@ import javafx.stage.Stage;
  */
 public class Task_Status_Updates_SceneController implements Initializable {
     @FXML
-    private Button logout;// acceptedTaskNo;
+    private Button logout;
     @FXML
-    private TableView<Task>  acceptedTaskTable;// acceptedTaskName;
+    private TableColumn<Accepted_Task,String > acceptedTaskStatus;
     @FXML
-    private TableColumn<Task, Integer>  acceptedTaskNo;// acceptedTaskStatus;
+    private TableColumn<Accepted_Task, String> acceptedTaskName;
     @FXML
-    private TableColumn<Task, String> acceptedTaskName;//acceptedTaskTable;
+    private TableView<Accepted_Task> acceptedTaskTable;
     @FXML
-    private TableColumn<Task, String> acceptedTaskStatus;
+    private TableColumn<Accepted_Task,Integer> acceptedTaskNo;
 
-    public void setData(Task selectedTask) {
-        // Populate data in tableView using selectedPerson
-       acceptedTaskTable.getItems().add(selectedTask);
-    }
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-    }
+  
        
-//        acceptedTaskNo.setCellValueFactory(new PropertyValueFactory<Accepted_Task, Integer>("Task"));
-//        acceptedTaskName.setCellValueFactory(new PropertyValueFactory<Accepted_Task, String>("TaskName"));
-//        acceptedTaskStatus.setCellValueFactory(new PropertyValueFactory<Accepted_Task,String>("TaskStatus"));
-//        
-//
-//    }    
-//
-//    @FXML
+        acceptedTaskNo.setCellValueFactory(new PropertyValueFactory<Accepted_Task, Integer>("Task"));
+        acceptedTaskName.setCellValueFactory(new PropertyValueFactory<Accepted_Task, String>("TaskName"));
+        acceptedTaskStatus.setCellValueFactory(new PropertyValueFactory<Accepted_Task,String>("TaskStatus"));
+        
+
+    }    
+
+    
     @FXML
     private void loadTaskOnClick(ActionEvent event) {
+    
+       Accepted_Task c1 = new Accepted_Task(123,"Sweing","accepted");      
+       Accepted_Task c2 = new Accepted_Task(456,"Cut Off","accepted");
+       Accepted_Task c3 = new Accepted_Task(567,"Supply","pending");
+       Accepted_Task c4 = new Accepted_Task(678,"New","completed");
+       Accepted_Task c5 = new Accepted_Task(789,"Submit Only","completed");
+       
+       ObservableList<Accepted_Task> acceptedtaskList  = FXCollections.observableArrayList(); //FX not Fx
+       System.out.println(acceptedtaskList);
+       acceptedtaskList.add(c1);
+       acceptedtaskList.add(c2);
+       acceptedtaskList.add(c3);
+       acceptedtaskList.add(c4);       
+       acceptedtaskList.add(c5);
+       acceptedTaskTable.setItems(acceptedtaskList);   
+       System.out.println(acceptedtaskList);     
+        
     }
-//       Accepted_Task c1 = new Accepted_Task(123,"Sweing","accepted");
-//       Accepted_Task c2 = new Accepted_Task(456,"Cut Off","accepted");
-//       Accepted_Task c3 = new Accepted_Task(567,"Supply","pending");
-//       Accepted_Task c4 = new Accepted_Task(678,"New","completed");
-//       Accepted_Task c5 = new Accepted_Task(789,"Submit Only","completed");
-//       
-//       ObservableList<Accepted_Task> acceptedtaskList  = FXCollections.observableArrayList(); //FX not Fx
-//       System.out.println(acceptedtaskList);
-//       acceptedtaskList.add(c1);
-//       acceptedtaskList.add(c2);
-//       acceptedtaskList.add(c3);
-//       acceptedtaskList.add(c4);
-//       acceptedtaskList.add(c5);
-//       acceptedTaskTable.setItems(acceptedtaskList);   //add on list
-//       System.out.println(acceptedtaskList);     
-//        
-//    }
 
     @FXML
     private void backButtonOnClick(ActionEvent event)throws IOException {

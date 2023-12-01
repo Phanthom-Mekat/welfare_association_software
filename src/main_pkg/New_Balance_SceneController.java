@@ -11,12 +11,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -24,12 +21,8 @@ import javafx.stage.Stage;
  *
  * @author Asus
  */
-public class Show_Earnings_SceneController implements Initializable {
+public class New_Balance_SceneController implements Initializable {
 
-    @FXML
-    private AnchorPane selectEarningTypeFxId;
-    @FXML
-    private ComboBox<String> earningTypeFxId;
     @FXML
     private Button logout;
 
@@ -38,34 +31,15 @@ public class Show_Earnings_SceneController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        earningTypeFxId.getItems().addAll("New Balance","Withdrawal Histry");
+        // TODO
     }    
-
-    @FXML
-    private void nextButtonOnClick(ActionEvent event) throws IOException {
-        
-        String a=earningTypeFxId.getValue().toString();
-        Parent sceneA;
-        if(a=="New Balance"){
-          sceneA=FXMLLoader.load(getClass().getResource("New_Balance_Scene.fxml"));  
-        }
-        else{
-          sceneA=FXMLLoader.load(getClass().getResource("Withdrawal_History_Scene.fxml"));
-        }
-        
-        Scene sceneB=new Scene(sceneA);
-        Stage stg=(Stage)((Node)event.getSource()).getScene().getWindow();
-        stg.setScene(sceneB);
-        stg.show();
-    }
-    
 
     @FXML
     private void backButtonOnClick(ActionEvent event) {
         try {
 
     
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_7_WelcomePage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Show_Earnings_Scene.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
 
