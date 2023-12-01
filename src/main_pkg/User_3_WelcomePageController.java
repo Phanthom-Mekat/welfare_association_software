@@ -1,23 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
- */
 package main_pkg;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBar;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
-/**
- * FXML Controller class
- *
- * @author DCL
- */
+
+
 public class User_3_WelcomePageController implements Initializable {
 
     @FXML
@@ -35,47 +41,122 @@ public class User_3_WelcomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
+
     }    
 
+
+
+
     @FXML
-    private void caseAssignmentOnCLick(ActionEvent event) {
+    private void logout(ActionEvent event){
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("UserLogin.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        
     }
 
     @FXML
-    private void checkClientDocument(ActionEvent event) {
+    private void laborComplianceOnClick(ActionEvent event) throws IOException{
+        Parent parent = FXMLLoader.load(getClass().getResource("User_3_LaborCompliance.fxml"));
+        dashboard.setCenter(parent);
+    }
+
+
+
+    @FXML
+    private void viewAndUpdateInformationAboutGarmentWorker(ActionEvent event) throws IOException{
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_ViewAndUpdateInformationWorkers.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+        
     }
 
     @FXML
-    private void SendTermsAndPolicToDocManagerOnClick(ActionEvent event) {
+    private void sendNotificationUpdateToWorker(ActionEvent event)throws IOException {
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_CheckNotification.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }        
+        
     }
 
     @FXML
-    private void checkNotification(ActionEvent event) {
+    private void enrollSelectedGarmentsWorkersSkill(ActionEvent event) throws IOException{
+      
+        
     }
 
     @FXML
-    private void caseChartOnClick(ActionEvent event) {
+    private void createPieChartOnTheRatioOfDeceivedGarmentWorkers(ActionEvent event)throws IOException {
+        Parent parent = FXMLLoader.load(getClass().getResource("User_3_CreatePieChart.fxml"));
+        dashboard.setCenter(parent);  
+    }
+
+
+    @FXML
+    private void createBudgetOfFinancialAidGarmentsWorkers(ActionEvent event)throws IOException {
+       
+        
     }
 
     @FXML
-    private void viewClintCaseRequests(ActionEvent event) {
+    private void assignTaskToWorkersOnClick(ActionEvent event) throws IOException {
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_AssignTaskToWorkers.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }  
     }
 
     @FXML
-    private void reimbursementOnClick(ActionEvent event) {
+    private void showFeedbackOfTheWorkers(ActionEvent event) {
+        try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_3_ShowFeedback.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }     
     }
 
-    @FXML
-    private void termsOnClick(ActionEvent event) {
-    }
-
-    @FXML
-    private void navigateToDashboard(ActionEvent event) {
-    }
-
-    @FXML
-    private void logout(ActionEvent event) {
-    }
     
 }

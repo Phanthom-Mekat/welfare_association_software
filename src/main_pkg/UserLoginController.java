@@ -93,23 +93,22 @@ public class UserLoginController implements Initializable {
                  Scene scene = new Scene(root);
                  currentStage.setScene(scene);
              }
-             if(userType.equals("Association Member")){
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_1_AssociationMembersWelcomePage.fxml"));
+             if(userType.equals("Garment Industry Workers")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_7_WelcomePage.fxml"));
                  Parent root = loader.load();
-                 User_1_AssociationMembersWelcomePageController dashboardController = loader.getController();
-                 dashboardController.setUserFullName(userFullName);
-                 Scene scene = new Scene(root);
-                 currentStage.setScene(scene);
-             }
-             if(userType.equals("Event Organizers")){
-                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_2_EventOrganizersWelcomePage.fxml"));
-                 Parent root = loader.load();
-                 User_2_EventOrganizersWelcomePageController dashboardController = loader.getController();
+                 User_7_WelcomePageController dashboardController = loader.getController();
                  dashboardController.setUserFullName(userFullName); 
                  Scene scene = new Scene(root);
                  currentStage.setScene(scene);
-             }
-             
+             }  
+             if(userType.equals("Healthcare Providers")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_8_WelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_8_WelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }             
         }
         
         else{

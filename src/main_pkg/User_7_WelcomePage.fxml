@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="590.0" style="-fx-background-color: linear-gradient(to bottom,#097ae6,#1ddbfd,#de220f);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_7_WelcomePageController">
+   <children>
+      <Button layoutX="152.0" layoutY="337.0" mnemonicParsing="false" onAction="#mainMenuButtonOnClick" prefHeight="25.0" prefWidth="295.0" text="Go to Main menu" />
+      <Text layoutX="89.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User (Worker) :">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Text>
+      <Label layoutX="192.0" layoutY="49.0" prefWidth="0.0" />
+      <Label fx:id="userName" layoutX="192.0" layoutY="49.0" text="Label">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <ComboBox fx:id="selectgoalFxId" layoutX="206.0" layoutY="96.0" prefWidth="150.0" />
+      <Button layoutX="274.0" layoutY="274.0" mnemonicParsing="false" onAction="#nextButtonOnClick" text="Next" />
+   </children>
+</AnchorPane>

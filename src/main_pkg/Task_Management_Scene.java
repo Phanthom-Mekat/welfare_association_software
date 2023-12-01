@@ -6,10 +6,8 @@ package main_pkg;
 
 /**
  *
- * @author DCL
+ * @author Asus
  */
-public class RANDOM {
-    int x=5;
-    int y=5;
+class Task_Management_Scene {
     
 }
