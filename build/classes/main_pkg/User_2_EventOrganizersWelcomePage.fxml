@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="551.0" prefWidth="643.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_2_EventOrganizersWelcomePageController">
+   <children>
+      <Label layoutX="164.0" layoutY="485.0" prefHeight="52.0" prefWidth="220.0" style="-fx-background-color: #A3E4D7;" text="  Number of Event Organizers :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="NumberofEventOrganizersLabel" layoutX="384.0" layoutY="485.0" prefHeight="52.0" prefWidth="94.0" style="-fx-background-color: #A3E4D7;" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#backButtonOnClick" style="-fx-background-color: #E74C3C;" text="Back" />
+      <Button layoutX="27.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#eventPlanningButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Event Planning" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="363.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#schedulingButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Scheduling" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="27.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#attendanceTrackingButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Attendance Tracking" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="363.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#promotionandMarketingButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Promotion and Marketing" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="363.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#rSVPManagementButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="RSVP Management" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="363.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#communicationButtonFeeOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Communication" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="27.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#feedbackCollectionButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Feedback Collection" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="27.0" layoutY="343.0" mnemonicParsing="false" onMouseClicked="#eventPhotosandUpdatesButtonOnClick" prefHeight="45.0" prefWidth="256.0" style="-fx-background-color: #F9E79F;" text="Event Photos and Updates" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="userName" layoutX="149.0" layoutY="53.0" prefHeight="34.0" prefWidth="244.0" textFill="#fc0093">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font></Label>
+      <Label layoutX="27.0" layoutY="53.0" prefHeight="34.0" prefWidth="122.0" text="Welcome" textFill="#fc0093">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
