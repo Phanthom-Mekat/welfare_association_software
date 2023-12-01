@@ -109,6 +109,22 @@ public class UserLoginController implements Initializable {
                  Scene scene = new Scene(root);
                  currentStage.setScene(scene);
              }             
+             if(userType.equals("Association Member")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_1_AssociationMembersWelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_1_AssociationMembersWelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }             
+             if(userType.equals("Event Organizers")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_2_EventOrganizersWelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_2_EventOrganizersWelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }             
         }
         
         else{
