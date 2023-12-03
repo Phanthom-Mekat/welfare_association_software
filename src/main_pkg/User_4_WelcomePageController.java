@@ -79,9 +79,24 @@ public class User_4_WelcomePageController implements Initializable {
     @FXML
     private void uploadContentOnClick(ActionEvent event) {
     }
-
+    
+    
     @FXML
-    private void updatePublishNews(ActionEvent event) {
+    private void workerListSurveySubmit(ActionEvent event)throws IOException {
+      try {
+
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("User_4_WorkerListSurvey.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
+    }         
+        
+        
     }
 
     @FXML
@@ -106,5 +121,7 @@ public class User_4_WelcomePageController implements Initializable {
     @FXML
     private void navigateToDashboard(ActionEvent event) {
     }
+
+
     
 }

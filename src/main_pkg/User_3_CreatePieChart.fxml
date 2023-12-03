@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="749.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_CreatePieChartController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="749.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_CreatePieChartController">
     <children>
         <PieChart fx:id="pieChart" layoutX="158.0" layoutY="107.0" prefHeight="377.0" prefWidth="411.0" style="-fx-background-color: transparent;" title="Ratio Chart" />
       <Label layoutX="9.0" layoutY="14.0" prefHeight="39.0" prefWidth="424.0" text="View Decieved Workers Ratio" textFill="#3c00ff" underline="true">
@@ -24,5 +24,7 @@
          </cursor>
       </Button>
       <Label fx:id="statusLabel" layoutX="246.0" layoutY="505.0" prefHeight="31.0" prefWidth="257.0" style="-fx-background-color: white;" text="Value" />
+      <Button layoutX="49.0" layoutY="602.0" mnemonicParsing="false" onAction="#backOnClick" text="Back" />
+      <Button fx:id="logout" layoutX="651.0" layoutY="596.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
     </children>
 </AnchorPane>
