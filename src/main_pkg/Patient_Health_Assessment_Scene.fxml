@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: aqua;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Patient_Health_Assessment_SceneController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #833ab4,#fd1d1d,#fcb045);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Patient_Health_Assessment_SceneController">
    <children>
       <Text layoutX="181.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Health Assessment" underline="true">
          <font>
@@ -16,9 +16,9 @@
       <TableView fx:id="patientHealthAssessmentTable" layoutX="20.0" layoutY="119.0" prefHeight="231.0" prefWidth="560.0">
         <columns>
           <TableColumn fx:id="patientNofxid" prefWidth="75.0" text="Patient No" />
-          <TableColumn fx:id="patientNamefxid" prefWidth="177.33334350585938" text="Patient Name" />
-            <TableColumn fx:id="patientGenderfxid" prefWidth="145.33331298828125" text="Gender" />
-            <TableColumn fx:id="patientDetailsUpdatefxid" prefWidth="160.0" text="Update Details" />
+          <TableColumn fx:id="patientNamefxid" prefWidth="162.00003051757812" text="Patient Name" />
+            <TableColumn fx:id="patientGenderfxid" prefWidth="120.666748046875" text="Gender" />
+            <TableColumn fx:id="patientDetailsUpdatefxid" prefWidth="200.6666259765625" text="Update Details" />
         </columns>
       </TableView>
       <Text layoutX="20.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient details show and update:">
@@ -26,9 +26,14 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Text>
-      <Button layoutX="247.0" layoutY="356.0" mnemonicParsing="false" text="Update Now!">
+      <Button layoutX="247.0" layoutY="356.0" mnemonicParsing="false" onAction="#updateNowButtonOnClick" text="Update Now!">
          <font>
             <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="logout" layoutX="20.0" layoutY="358.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
          </font>
       </Button>
    </children>

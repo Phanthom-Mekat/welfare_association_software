@@ -2,22 +2,30 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="selectEarningTypeFxId" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom,#097ae6,#1ddbfd,#de220f);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Show_Earnings_SceneController">
+<AnchorPane id="AnchorPane" fx:id="selectEarningTypeFxId" prefHeight="407.0" prefWidth="557.0" style="-fx-background-color: linear-gradient(to bottom,#097ae6,#1ddbfd,#de220f);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Show_Earnings_SceneController">
    <children>
-      <Text layoutX="191.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show your Earnings" underline="true">
+      <Text layoutX="185.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Show your Earnings" underline="true">
          <font>
             <Font name="System Bold" size="20.0" />
          </font></Text>
-      <ComboBox fx:id="earningTypeFxId" layoutX="225.0" layoutY="102.0" prefWidth="150.0" promptText="Select Type" />
-      <Button layoutX="274.0" layoutY="305.0" mnemonicParsing="false" onAction="#nextButtonOnClick" text="Next">
+      <ComboBox fx:id="earningTypeFxId" layoutX="296.0" layoutY="94.0" prefWidth="150.0" promptText="Select Type" />
+      <Button layoutX="254.0" layoutY="332.0" mnemonicParsing="false" onAction="#nextButtonOnClick" text="Next">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="logout" layoutX="22.0" layoutY="361.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+      <Button fx:id="logout" layoutX="38.0" layoutY="360.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="200.0" layoutY="144.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="171.0" fitWidth="551.0" layoutX="113.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bgImage/IMG_20231203_013026.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

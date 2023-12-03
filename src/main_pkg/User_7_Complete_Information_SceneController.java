@@ -105,8 +105,6 @@ public class User_7_Complete_Information_SceneController implements Initializabl
         phoneCol.clear();
         nameCol.clear();
         detailsCol.clear();
-//        typeCol.setValue(null);
-//        genderCol.setValue(null);
     }        
       
     
