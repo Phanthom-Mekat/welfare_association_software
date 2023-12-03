@@ -169,6 +169,8 @@ public class UserLoginController implements Initializable {
 
     @FXML
     private void ExitButtonOnClick(ActionEvent event) {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();        
     }
     private void showErrorAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
