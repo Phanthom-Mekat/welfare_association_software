@@ -41,7 +41,7 @@ public class User_3_WelcomePageController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+        Clock clock = new Clock(clockLabel);
 
     }    
 

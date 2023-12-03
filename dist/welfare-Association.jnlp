@@ -11,7 +11,7 @@
     <jar href="lib\charm-glisten-4.4.1-javadoc.jar" size="2817088" download="eager" />
     <jar href="lib\charm-glisten-4.4.1.jar" size="1040787" download="eager" />
     <jar href="lib\charm-glisten-6.1.0-javadoc.jar" size="3543225" download="eager" />
-    <jar href="welfare-Association.jar" size="1107852" download="eager" />
+    <jar href="welfare-Association.jar" size="1107984" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="main_pkg.WelfareAssociation"  name="welfare-Association" />
   <update check="always"/>
