@@ -18,7 +18,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#requestInterviewOnCLick" text="request Interview" />
                   <MenuItem mnemonicParsing="false" onAction="#uploadContentOnClick" text="upload Content" />
-                  <MenuItem mnemonicParsing="false" onAction="#updatePublishNews" text="update any publish news" />
+                  <MenuItem mnemonicParsing="false" onAction="#workerListSurveySubmit" text="Worker List Survey Submit" />
                   <MenuItem mnemonicParsing="false" onAction="#storyGatherOnClick" text="Story gathering" />
             </items>
           </Menu>
