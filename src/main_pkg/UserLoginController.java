@@ -55,6 +55,16 @@ public class UserLoginController implements Initializable {
 
     @FXML
     private void forgotPasswordButtonOnClick(ActionEvent event) {
+        try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ForgotPassword.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+
+                Stage currentStage = (Stage) signupButton.getScene().getWindow();
+                currentStage.setScene(scene);
+            }catch (IOException e) {
+                e.printStackTrace();
+        }        
         
     }
 
@@ -148,7 +158,6 @@ public class UserLoginController implements Initializable {
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
 
-                // Get the current stage from any node in the current scene
                 Stage currentStage = (Stage) signupButton.getScene().getWindow();
                 currentStage.setScene(scene);
             }catch (IOException e) {

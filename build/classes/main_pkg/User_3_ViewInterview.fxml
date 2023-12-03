@@ -4,19 +4,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="734.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_ViewInterviewController">
+<AnchorPane id="AnchorPane" prefHeight="678.0" prefWidth="734.0" style="-fx-background-color: linear-gradient(to bottom, #aeecee,#88c2c6,#d494e9);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_ViewInterviewController">
    <children>
       <TableView fx:id="tableview" layoutX="224.0" layoutY="77.0" prefHeight="430.0" prefWidth="489.0">
         <columns>
-          <TableColumn fx:id="interviewerNameCol" prefWidth="140.0" text="Interviewer Name" />
-          <TableColumn fx:id="mediaNameCol" prefWidth="97.0" text="Media Name" />
-            <TableColumn fx:id="timeTableColumn" minWidth="0.0" prefWidth="100.0" text="Time" />
-            <TableColumn fx:id="purposeCol" prefWidth="75.0" text="Purpose" />
-            <TableColumn fx:id="durationCol" prefWidth="75.0" text="Duration" />
+          <TableColumn fx:id="interviewerNameCol" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);" text="Interviewer Name" />
+          <TableColumn fx:id="mediaNameCol" prefWidth="97.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);" text="Media Name" />
+            <TableColumn fx:id="timeTableColumn" minWidth="0.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);" text="Time" />
+            <TableColumn fx:id="purposeCol" prefWidth="75.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);" text="Purpose" />
+            <TableColumn fx:id="durationCol" prefWidth="76.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);" text="Duration" />
         </columns>
       </TableView>
       <Label layoutX="112.0" layoutY="29.0" prefHeight="27.0" prefWidth="378.0" text="Appointment Check for Interview">
@@ -24,9 +29,45 @@
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="30.0" layoutY="142.0" mnemonicParsing="false" onAction="#checkappoinmentButtonOnClick" prefHeight="88.0" prefWidth="180.0" text="Check Appoinments" />
+      <Button layoutX="30.0" layoutY="142.0" mnemonicParsing="false" onAction="#checkappoinmentButtonOnClick" prefHeight="88.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1); -fx-background-radius: 11;" text="Check Appoinments">
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Button>
       <Line endX="300.0" layoutX="300.0" layoutY="64.0" startX="-293.0" />
-      <Button layoutX="37.0" layoutY="602.0" mnemonicParsing="false" onAction="#backOnCLick" text="Back" />
-      <Button fx:id="logout" layoutX="632.0" layoutY="602.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+      <Button layoutX="37.0" layoutY="602.0" mnemonicParsing="false" onAction="#backOnCLick" prefHeight="31.0" prefWidth="100.0" style="-fx-background-radius: 11; -fx-background-color: lightyellow;" text="Back">
+         <effect>
+            <Glow level="1.0">
+               <input>
+                  <DropShadow height="38.105000000000004" radius="22.82875" spread="0.18" width="55.21">
+                     <input>
+                        <ColorAdjust brightness="-0.4" contrast="-0.39" hue="0.04" saturation="0.69" />
+                     </input>
+                  </DropShadow>
+               </input>
+            </Glow>
+         </effect></Button>
+      <Button fx:id="logout" layoutX="585.0" layoutY="602.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="115.0" style="-fx-background-radius: 22; -fx-background-color: red;" text="Logout">
+         <effect>
+            <DropShadow>
+               <input>
+                  <Glow>
+                     <input>
+                        <Lighting bumpInput="$null">
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Glow>
+               </input>
+            </DropShadow>
+         </effect></Button>
    </children>
 </AnchorPane>

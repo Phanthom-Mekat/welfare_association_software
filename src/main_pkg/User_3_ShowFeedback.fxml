@@ -4,25 +4,81 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="614.0" prefWidth="749.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_ShowFeedbackController">
    <children>
       <TableView fx:id="feedbackTableView" layoutX="38.0" layoutY="110.0" prefHeight="410.0" prefWidth="673.0">
          <columns>
-            <TableColumn fx:id="feedbackName" prefWidth="120.0" text="Name" />
-            <TableColumn fx:id="feedbackNumber" minWidth="0.0" prefWidth="188.0" text="Number" />
-            <TableColumn fx:id="feedbackText" prefWidth="364.0" text="feedbacks" />
+            <TableColumn fx:id="feedbackName" prefWidth="120.0" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" text="Name" />
+            <TableColumn fx:id="feedbackNumber" minWidth="0.0" prefWidth="188.0" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" text="Number" />
+            <TableColumn fx:id="feedbackText" prefWidth="364.0" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" text="feedbacks" />
          </columns>
       </TableView>
-      <Label layoutX="38.0" layoutY="62.0" text="View Workers Feedbacks" textFill="WHITE">
+      <Label layoutX="38.0" layoutY="62.0" text="View Workers Feedbacks">
          <font>
             <Font name="Bell MT Bold" size="26.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#372a54" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Button layoutX="604.0" layoutY="71.0" mnemonicParsing="false" onAction="#loadFeedback" prefHeight="31.0" prefWidth="107.0" text="Load" />
-      <Button layoutX="38.0" layoutY="553.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="31.0" prefWidth="90.0" text="Back" />
-      <Button fx:id="logout" layoutX="624.0" layoutY="553.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="90.0" text="Logout" />
+      <Button layoutX="604.0" layoutY="71.0" mnemonicParsing="false" onAction="#loadFeedback" prefHeight="31.0" prefWidth="107.0" style="-fx-background-color: linear-gradient(to bottom, #aeafee,#c688bc,#94e9a8); -fx-background-radius: 22;" text="Load">
+         <effect>
+            <DropShadow spread="0.52">
+               <input>
+                  <SepiaTone level="0.93">
+                     <input>
+                        <ColorAdjust brightness="0.12" contrast="0.27" hue="0.22" saturation="0.32" />
+                     </input>
+                  </SepiaTone>
+               </input>
+            </DropShadow>
+         </effect></Button>
+      <Button layoutX="38.0" layoutY="553.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="31.0" prefWidth="90.0" style="-fx-background-radius: 22; -fx-background-color: linear-gradient(to bottom, #aeafee,#c688bc,#94e9a8);" text="Back">
+         <effect>
+            <DropShadow height="30.33" radius="12.3325" spread="0.4">
+               <input>
+                  <ColorAdjust brightness="0.37" contrast="0.46" hue="-0.63" saturation="0.17">
+                     <input>
+                        <Lighting diffuseConstant="1.27" specularConstant="0.69" specularExponent="36.1" surfaceScale="0.0">
+                           <bumpInput>
+                              <Shadow height="64.54" radius="23.995" width="33.44" />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </ColorAdjust>
+               </input>
+            </DropShadow>
+         </effect></Button>
+      <Button fx:id="logout" layoutX="624.0" layoutY="553.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="90.0" style="-fx-background-radius: 22; -fx-background-color: linear-gradient(to bottom, #aeafee,#c688bc,#94e9a8);" text="Logout">
+         <effect>
+            <DropShadow radius="5.335" spread="0.07" width="2.34">
+               <input>
+                  <ColorAdjust brightness="0.51" contrast="0.95" hue="-0.02" saturation="1.0">
+                     <input>
+                        <SepiaTone level="0.41" />
+                     </input>
+                  </ColorAdjust>
+               </input>
+            </DropShadow>
+         </effect></Button>
    </children>
 </AnchorPane>

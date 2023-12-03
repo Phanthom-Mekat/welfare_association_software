@@ -28,10 +28,10 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Button layoutX="580.0" layoutY="93.0" mnemonicParsing="false" onAction="#loadNewsOnClick" prefHeight="32.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: red;" text="Load News" />
-      <Button layoutX="14.0" layoutY="570.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="39.0" prefWidth="103.0" style="-fx-background-radius: 14; -fx-background-color: red;" text="Back" />
+      <Button layoutX="580.0" layoutY="93.0" mnemonicParsing="false" onAction="#loadNewsOnClick" prefHeight="32.0" prefWidth="150.0" style="-fx-background-radius: 15; -fx-background-color: green;" text="Load News" />
+      <Button layoutX="14.0" layoutY="570.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="39.0" prefWidth="103.0" style="-fx-background-radius: 14; -fx-background-color: green;" text="Back" />
       <Button fx:id="logout" layoutX="634.0" layoutY="563.0" mnemonicParsing="false" onAction="#logout" prefHeight="39.0" prefWidth="103.0" style="-fx-background-radius: 14; -fx-background-color: red;" text="Logout" />
-      <TextArea fx:id="textAreaNews" layoutY="159.0" prefHeight="395.0" prefWidth="751.0" style="-fx-background-radius: 10; -fx-background-color: black;" />
+      <TextArea fx:id="textAreaNews" editable="false" layoutY="159.0" prefHeight="395.0" prefWidth="751.0" style="-fx-background-radius: 10; -fx-background-color: black;" />
       <AmbientLight color="CHARTREUSE" layoutX="397.0" layoutY="26.0" lightOn="true" />
       <PointLight color="CHARTREUSE" layoutX="238.0" layoutY="27.0" lightOn="true" />
 

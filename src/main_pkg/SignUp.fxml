@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.SignUpController">
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #aeafee,#c688bc,#94e9a8);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.SignUpController">
    <children>
       <Label layoutX="63.0" layoutY="182.0" prefHeight="17.0" prefWidth="77.0" text="Full Name" />
       <Label layoutX="63.0" layoutY="234.0" prefHeight="17.0" prefWidth="96.0" text="User Name" />
@@ -16,29 +16,29 @@
       <Label layoutX="398.0" layoutY="165.0" prefHeight="17.0" prefWidth="96.0" text="Date Of Birth" />
       <Label layoutX="398.0" layoutY="217.0" prefHeight="17.0" prefWidth="106.0" text="New Password" />
       <Label layoutX="398.0" layoutY="278.0" prefHeight="21.0" prefWidth="132.0" text="Confirm Password" />
-      <TextField fx:id="newUserNameTextField" layoutX="171.0" layoutY="230.0" />
-      <TextField fx:id="newUserPhoneNumberTextField" layoutX="171.0" layoutY="280.0" />
-      <TextField fx:id="newPasswordTextField" layoutX="530.0" layoutY="213.0" prefHeight="31.0" prefWidth="149.0" />
-      <TextField fx:id="confirmPasswordTextField" layoutX="530.0" layoutY="273.0" prefHeight="31.0" prefWidth="149.0" />
-      <DatePicker fx:id="newUserDob" layoutX="530.0" layoutY="161.0" prefHeight="25.0" prefWidth="149.0" />
+      <TextField fx:id="newUserNameTextField" layoutX="171.0" layoutY="230.0" style="-fx-background-radius: 11;" />
+      <TextField fx:id="newUserPhoneNumberTextField" layoutX="171.0" layoutY="280.0" style="-fx-background-radius: 11;" />
+      <TextField fx:id="newPasswordTextField" layoutX="530.0" layoutY="213.0" prefHeight="31.0" prefWidth="149.0" style="-fx-background-radius: 11;" />
+      <TextField fx:id="confirmPasswordTextField" layoutX="530.0" layoutY="273.0" prefHeight="31.0" prefWidth="149.0" style="-fx-background-radius: 11;" />
+      <DatePicker fx:id="newUserDob" layoutX="530.0" layoutY="161.0" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" />
       <Label layoutX="189.0" layoutY="31.0" text="Register New Account" textFill="RED">
          <font>
             <Font name="System Bold Italic" size="33.0" />
          </font>
       </Label>
-      <Button fx:id="signup" layoutX="530.0" layoutY="423.0" mnemonicParsing="false" onAction="#createAccountButtonOnClick" prefHeight="40.0" prefWidth="149.0" text="Create New Account" textFill="#00ff1b">
+      <Button fx:id="signup" layoutX="530.0" layoutY="423.0" mnemonicParsing="false" onAction="#createAccountButtonOnClick" prefHeight="40.0" prefWidth="149.0" style="-fx-background-radius: 33; -fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" text="Create New Account" textFill="#00ff1b">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="goback" layoutX="74.0" layoutY="428.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="27.0" prefWidth="96.0" text="Go Back" />
-      <TextField fx:id="newNameTextField" layoutX="171.0" layoutY="178.0" />
+      <Button fx:id="goback" layoutX="74.0" layoutY="428.0" mnemonicParsing="false" onAction="#goBackButtonOnClick" prefHeight="27.0" prefWidth="96.0" style="-fx-background-radius: 22; -fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" text="Go Back" />
+      <TextField fx:id="newNameTextField" layoutX="171.0" layoutY="178.0" style="-fx-background-radius: 11;" />
       <Label layoutX="196.0" layoutY="435.0" text="Give Valid Number in case you Forget your password" textFill="#5500ff">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
-      <ComboBox fx:id="userTypeComboBox" layoutX="171.0" layoutY="123.0" prefHeight="31.0" prefWidth="187.0" promptText="Register as:" />
+      <ComboBox fx:id="userTypeComboBox" layoutX="171.0" layoutY="123.0" prefHeight="31.0" prefWidth="187.0" promptText="Register as:" style="-fx-background-radius: 22; -fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" />
       <Label layoutX="63.0" layoutY="128.0" text="User Type" />
    </children>
 </AnchorPane>

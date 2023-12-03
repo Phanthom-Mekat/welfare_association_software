@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
@@ -59,4 +60,14 @@
         </buttons>
       </ButtonBar>
    </bottom>
+   <right>
+      <Slider prefHeight="18.0" prefWidth="289.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Label prefHeight="79.0" prefWidth="419.0" text="Rate our Software" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </left>
 </BorderPane>
