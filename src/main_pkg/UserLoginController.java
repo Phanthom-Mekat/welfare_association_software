@@ -55,6 +55,16 @@ public class UserLoginController implements Initializable {
 
     @FXML
     private void forgotPasswordButtonOnClick(ActionEvent event) {
+        try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("ForgotPassword.fxml"));
+                Parent root = loader.load();
+                Scene scene = new Scene(root);
+
+                Stage currentStage = (Stage) signupButton.getScene().getWindow();
+                currentStage.setScene(scene);
+            }catch (IOException e) {
+                e.printStackTrace();
+        }        
         
     }
 
@@ -109,6 +119,22 @@ public class UserLoginController implements Initializable {
                  Scene scene = new Scene(root);
                  currentStage.setScene(scene);
              }             
+             if(userType.equals("Association Member")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_1_AssociationMembersWelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_1_AssociationMembersWelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }             
+             if(userType.equals("Event Organizers")){
+                 FXMLLoader loader = new FXMLLoader(getClass().getResource("User_2_EventOrganizersWelcomePage.fxml"));
+                 Parent root = loader.load();
+                 User_2_EventOrganizersWelcomePageController dashboardController = loader.getController();
+                 dashboardController.setUserFullName(userFullName); 
+                 Scene scene = new Scene(root);
+                 currentStage.setScene(scene);
+             }             
         }
         
         else{
@@ -132,7 +158,6 @@ public class UserLoginController implements Initializable {
                 Parent root = loader.load();
                 Scene scene = new Scene(root);
 
-                // Get the current stage from any node in the current scene
                 Stage currentStage = (Stage) signupButton.getScene().getWindow();
                 currentStage.setScene(scene);
             }catch (IOException e) {
@@ -144,6 +169,8 @@ public class UserLoginController implements Initializable {
 
     @FXML
     private void ExitButtonOnClick(ActionEvent event) {
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();        
     }
     private void showErrorAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);

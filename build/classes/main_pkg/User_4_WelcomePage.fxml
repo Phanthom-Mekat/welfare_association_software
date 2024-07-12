@@ -7,30 +7,31 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bordarpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_4_WelcomePageController">
+<BorderPane fx:id="bordarpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#49fd9d);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_4_WelcomePageController">
    <top>
-      <MenuBar style="-fx-background-color: linear-gradient(to bottom, #F0F8FF, #bc310e);" BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="37.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="Tasks">
+          <Menu mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 12;" text="Tasks">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#generateInvoicesOnClick" text="Generate Invoices for Clients" />
-                  <MenuItem mnemonicParsing="false" onAction="#SubmitAuditReport" text="Submit Audit Report to HR Manager" />
-                  <MenuItem mnemonicParsing="false" onAction="#PayRollOnClick" text="Payroll And Processing of employees" />
-                  <MenuItem mnemonicParsing="false" onAction="#ProcessExpenseReimbursementOnCLick" text="Process Expense Reimbursement for employees" />
+              <MenuItem mnemonicParsing="false" onAction="#requestInterviewOnCLick" text="request Interview" />
+                  <MenuItem mnemonicParsing="false" onAction="#uploadContentOnClick" text="upload Content" />
+                  <MenuItem mnemonicParsing="false" onAction="#workerListSurveySubmit" text="Worker List Survey Submit" />
+                  <MenuItem mnemonicParsing="false" onAction="#storyGatherOnClick" text="Story gathering" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="View">
+          <Menu mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 15;" text="View">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#overtimedataanalysisfromPayrollONClick" text="Overtime data of employees from Payroll" />
-                  <MenuItem mnemonicParsing="false" onAction="#termsandpolicyOnClick" text="Updated Terms And Policy of the firm" />
-                  <MenuItem mnemonicParsing="false" onAction="#ReimbursementReportsOnClick" text="Reimbursement request from employees" />
-                  <MenuItem mnemonicParsing="false" onAction="#TrackAddWorkHrsOnClk" text="Track validity of overtime working hours of employees" />
+              <MenuItem mnemonicParsing="false" onAction="#connectWithWorkers" text="connect with the workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#reportingOnClick" text="reporting" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewResource" text="viewResource" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewSurveyOnCLick" text="view survey" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Nevigator">
+            <Menu mnemonicParsing="false" style="-fx-background-color: yellow; -fx-background-radius: 14;" text="Nevigator">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#navigateToDashboard" text="Back" />
                </items>
@@ -39,17 +40,17 @@
       </MenuBar>
    </top>
    <bottom>
-      <ButtonBar prefHeight="29.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #F0F8FF, #bc310e);" BorderPane.alignment="CENTER">
+      <ButtonBar prefHeight="29.0" prefWidth="750.0" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" BorderPane.alignment="CENTER">
         <buttons>
             <Label fx:id="userName" prefHeight="17.0" prefWidth="299.0" text="Username:">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-            <Label fx:id="clockLabel" text="Clock">
+            <Label fx:id="clockLabel" style="-fx-background-color: linear-gradient(to bottom, #3f5efb,#46fc6d);" text="Clock">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font></Label>
-          <Button fx:id="logout" mnemonicParsing="false" onAction="#logOutonClick" prefHeight="25.0" prefWidth="100.0" text="Logout">
+          <Button fx:id="logout" mnemonicParsing="false" onAction="#logOutonClick" prefHeight="25.0" prefWidth="100.0" style="-fx-background-radius: 15; -fx-background-color: red;" text="Logout">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
@@ -59,5 +60,14 @@
         </buttons>
       </ButtonBar>
    </bottom>
+   <right>
+      <Slider prefHeight="18.0" prefWidth="289.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <Label prefHeight="79.0" prefWidth="419.0" text="Rate our Software" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+   </left>
 </BorderPane>
-

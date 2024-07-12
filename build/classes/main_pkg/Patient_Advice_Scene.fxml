@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, #833ab4,#fd1d1d,#fcb045);" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.Patient_Advice_SceneController">
+   <children>
+      <TextArea fx:id="textArea" editable="false" layoutX="17.0" layoutY="78.0" prefHeight="263.0" prefWidth="571.0" text="1. Communication with Healthcare Providers:&#10;    #Clearly communicate your symptoms, concerns, and medical history to your healthcare providers.&#10;    #Ask questions about your condition, treatment options, and any potential side effects.&#10;     &#10;2.  Follow Medical Advice:&#10;    #Adhere to the treatment plan prescribed by your healthcare provider.&#10;    #Take medications as directed and complete the full course if applicable.&#10;    #Attend follow-up appointments and tests as recommended.&#10;&#10;3. Healthy Lifestyle:&#10;    #Adopt a healthy lifestyle with a balanced diet, regular exercise, and adequate sleep.&#10;    #Avoid harmful habits such as smoking and excessive alcohol consumption.&#10;&#10;4.Stay Informed:&#10;    #Educate yourself about your medical condition and treatment options from reliable sources.&#10;    #Be aware of warning signs or symptoms that may require immediate medical attention.&#10;&#10;5. Mental Health:&#10;    #Prioritize mental health by managing stress, seeking support when needed, and practicing relaxation techniques.&#10;    #Inform your healthcare provider if you're experiencing mental health challenges.&#10;&#10;6. Safety Measures:&#10;    #Take precautions to prevent accidents and injuries, especially if you have mobility or balance issues.&#10;    #Make your living environment safe and accessible.&#10;&#10;7. Regular Check-ups:&#10;    #Schedule regular check-ups even when you're feeling well to monitor your overall health.&#10;    #Discuss preventive measures and screenings with your healthcare provider.&#10;&#10;8. Medication Management:&#10;     #Keep an updated list of your medications, including names, dosages, and frequencies.&#10;     #Inform your healthcare provider of any over-the-counter medications or supplements you are taking.&#10;&#10;9. Advocate for Yourself:&#10;     #Be an active participant in your healthcare decisions.&#10;     #If you have concerns or doubts, don't hesitate to seek a second opinion.&#10;&#10;10. Support System:&#10;     #Build a support system of family and friends who can provide emotional and practical support.&#10;     #Join support groups if applicable to connect with others facing similar health challenges.&#10;&#10;***Remember, these are general guidelines, and individual circumstances may vary. Always consult with your healthcare &#10;provider for advice tailored to your specific situation.&#10;">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="176.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient Advices Scene" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="logout" layoutX="24.0" layoutY="350.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="440.0" layoutY="349.0" mnemonicParsing="false" onAction="#editButtonOnClick" prefHeight="25.0" prefWidth="51.0" text="Edit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="511.0" layoutY="347.0" mnemonicParsing="false" onAction="#submitButtonOnClick" text="Submit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

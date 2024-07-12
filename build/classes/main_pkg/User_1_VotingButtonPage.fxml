@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="647.0" style="-fx-background-color: skyblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_1_VotingButtonPageController">
+   <children>
+      <Label layoutX="140.0" layoutY="14.0" text="Voting and Decision-Making:" textFill="#fc0093">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="57.0" prefHeight="23.0" prefWidth="83.0" text="President:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="presidentComboBox" layoutX="224.0" layoutY="57.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #F9E79F;" />
+      <Label layoutX="102.0" layoutY="101.0" prefHeight="23.0" prefWidth="122.0" text="Vice President :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="icePresidentComboBox" layoutX="226.0" layoutY="97.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #F9E79F;" />
+      <Label layoutX="137.0" layoutY="138.0" prefHeight="23.0" prefWidth="90.0" text="Treasurer :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="treasurerComboBox" layoutX="227.0" layoutY="136.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #F9E79F;" />
+      <Label layoutX="76.0" layoutY="181.0" prefHeight="23.0" prefWidth="150.0" text="head of operation :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="headOfOperationComboBox" layoutX="226.0" layoutY="179.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #F9E79F;" />
+      <Label layoutX="184.0" layoutY="221.0" prefHeight="23.0" prefWidth="40.0" text="HR :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="hRComboBox" layoutX="226.0" layoutY="219.0" prefHeight="27.0" prefWidth="244.0" style="-fx-background-color: #F9E79F;" />
+      <Line endX="532.0" layoutX="115.0" layoutY="290.0" startX="-115.0" />
+      <Label layoutX="244.0" layoutY="301.0" text="Registration" textFill="#fc0093">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="493.0" layoutY="106.0" mnemonicParsing="false" onAction="#VoteButtonOnClick" prefHeight="88.0" prefWidth="141.0" text="Vote" />
+      <ComboBox fx:id="SlectPostComboBox" layoutX="460.0" layoutY="348.0" prefHeight="27.0" prefWidth="174.0" promptText="Sect Post" style="-fx-background-color: #F9E79F;" />
+      <Label layoutX="14.0" layoutY="353.0" text="Name :" />
+      <TextField fx:id="nameTextField" layoutX="53.0" layoutY="348.0" />
+      <Label layoutX="230.0" layoutY="353.0" text="UserID :" />
+      <TextField fx:id="UserIDTextField" layoutX="269.0" layoutY="348.0" />
+      <Button layoutX="145.0" layoutY="390.0" mnemonicParsing="false" onDragDetected="#registerButtonOnClick" prefHeight="75.0" prefWidth="340.0" text="Register " />
+      <Label fx:id="confirmRegistationLabel" layoutX="245.0" layoutY="489.0" prefHeight="23.0" prefWidth="141.0" style="-fx-background-color: lavender;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="votingConfarmationLabel" layoutX="266.0" layoutY="258.0" prefHeight="23.0" prefWidth="98.0" style="-fx-background-color: lavender;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backButtonOnclick" style="-fx-background-color: #E74C3C;" text="Back" />
+   </children>
+</AnchorPane>

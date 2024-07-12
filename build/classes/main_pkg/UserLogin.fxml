@@ -14,17 +14,17 @@
 
 <AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="823.0" style="-fx-background-color: linear-gradient(to bottom, #a4bf6f,#2d82fd,#22c3ae);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.UserLoginController">
    <children>
-      <Label layoutX="221.0" layoutY="315.0" prefHeight="27.0" prefWidth="91.0" text="User ID" textFill="WHITE">
+      <Label layoutX="221.0" layoutY="315.0" prefHeight="27.0" prefWidth="91.0" text="User ID">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <Label layoutX="221.0" layoutY="369.0" prefHeight="27.0" prefWidth="91.0" text="Password" textFill="WHITE">
+      <Label layoutX="221.0" layoutY="369.0" prefHeight="27.0" prefWidth="91.0" text="Password">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="userIdTextField" layoutX="319.0" layoutY="309.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88;">
+      <TextField fx:id="userIdTextField" layoutX="319.0" layoutY="309.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88; -fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);">
          <effect>
             <ColorAdjust />
          </effect>
@@ -32,7 +32,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <TextField fx:id="passwordTextField" layoutX="319.0" layoutY="363.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88;">
+      <TextField fx:id="passwordTextField" layoutX="319.0" layoutY="363.0" opacity="0.65" prefHeight="39.0" prefWidth="270.0" style="-fx-background-radius: 88; -fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);">
          <effect>
             <ColorAdjust />
          </effect>
@@ -40,7 +40,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="userTypeComboBox" layoutX="221.0" layoutY="238.0" opacity="0.75" prefHeight="39.0" prefWidth="373.0" promptText="Select User Type" style="-fx-background-radius: 88;">
+      <ComboBox fx:id="userTypeComboBox" layoutX="221.0" layoutY="238.0" opacity="0.75" prefHeight="39.0" prefWidth="373.0" promptText="Select User Type" style="-fx-background-radius: 88; -fx-background-color: linear-gradient(to bottom, #b4eeae,#88c3c6,#94e9e1);">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -69,7 +69,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Label layoutX="306.0" layoutY="70.0" prefHeight="71.0" prefWidth="178.0" text="Welcome">
+      <Label layoutX="76.0" layoutY="50.0" prefHeight="128.0" prefWidth="711.0" text="BDWelfareAssociationSoftware">
          <font>
             <Font name="OCR A Extended" size="41.0" />
          </font>

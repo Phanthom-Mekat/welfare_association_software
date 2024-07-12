@@ -34,6 +34,8 @@ public class User_7_WelcomePageController implements Initializable {
     private Button goback;    
     @FXML
     private ComboBox<String> selectgoalFxId;
+    @FXML
+    private Button logout;
 
     public void setUserFullName(String fullName) {
         userName.setText(fullName);
@@ -42,13 +44,23 @@ public class User_7_WelcomePageController implements Initializable {
              
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        selectgoalFxId.getItems().addAll("Task Management","Task Status Updates","Feedback Submission","Quality Control","Communication","Training Materials","Complete Information","Earnings");
+        selectgoalFxId.getItems().addAll("Task Management","Task Status Updates","Feedback Submission","Quality Control","Communication","Complete Information","Earnings","Training Materials");
     }    
 
 
     @FXML
     private void mainMenuButtonOnClick(ActionEvent event) {
+        try {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("UserLogin.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+
+        Stage currentStage = (Stage) logout.getScene().getWindow();
+        currentStage.setScene(scene);
+    } catch (IOException e) {
+        e.printStackTrace();
     }
+}
     
     @FXML
     private void nextButtonOnClick(ActionEvent event) throws IOException {

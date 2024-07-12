@@ -1,6 +1,11 @@
 
 package main_pkg;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Optional;
@@ -40,15 +45,45 @@ public class User_3_WagesAndWorkingHourController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+
     }    
 
     @FXML
     private void editOnClick(ActionEvent event) throws IOException {
+        textArea.setEditable(true);
+       
     }
 
     @FXML
     private void submitOnClick(ActionEvent event) throws IOException {
+        
+        textArea.setEditable(false);
+        File f = null;
+        FileOutputStream fos = null;
+        DataOutputStream dos = null;
+        
+        try {
+            f = new File("wagesandworkinghour.bin");
+            if (!f.exists()) {
+                fos = new FileOutputStream(f);
+            } else {
+                fos = new FileOutputStream(f, true);
+            }
+            dos = new DataOutputStream(fos);
+
+            dos.writeUTF(textArea.getText());
+
+
+        } catch (IOException ex) {
+            Logger.getLogger(User_3_WagesAndWorkingHourController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(dos != null) dos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(User_3_WagesAndWorkingHourController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+ 
     }
 
     @FXML

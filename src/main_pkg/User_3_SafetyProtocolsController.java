@@ -49,10 +49,13 @@ public class User_3_SafetyProtocolsController implements Initializable {
 
     @FXML
     private void editOnClick(ActionEvent event) throws IOException{
+        textArea.setEditable(true);
     }
 
     @FXML
     private void submitOnClick(ActionEvent event)throws IOException {
+       textArea.setEditable(false); 
+        
     }
 
     @FXML

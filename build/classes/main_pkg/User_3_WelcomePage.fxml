@@ -14,25 +14,25 @@
 
 <BorderPane fx:id="dashboard" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="622.0" prefWidth="751.0" style="-fx-background-color: linear-gradient(to bottom, #07d4ed,#6f02e5);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_pkg.User_3_WelcomePageController">
    <top>
-      <MenuBar prefHeight="43.0" prefWidth="751.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+      <MenuBar prefHeight="43.0" prefWidth="751.0" style="-fx-background-color: linear-gradient(to bottom, #aeecee,#88c2c6,#d494e9);" BorderPane.alignment="CENTER">
         <menus>
-          <Menu mnemonicParsing="false" text="View">
+          <Menu mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9); -fx-background-radius: 16;" text="View">
             <items>
-                  <MenuItem mnemonicParsing="false" onAction="#laborComplianceOnClick" text="Labor Compliance" />
-                  <MenuItem mnemonicParsing="false" onAction="#assignTaskToWorkersOnClick" text="Assign Task To Workers" />
-                  <MenuItem mnemonicParsing="false" onAction="#viewAndUpdateInformationAboutGarmentWorker" text="View and Update Information About Garment Worker" />
-                  <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" text="Send Notification And Update to Worker" />
-                  <MenuItem mnemonicParsing="false" onAction="#enrollSelectedGarmentsWorkersSkill" text="Enroll Selected Garments Workers Skill" />
-                  <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfDeceivedGarmentWorkers" text="Create pie chart on the ratio of  deceived garment workers" />
-                  <MenuItem mnemonicParsing="false" onAction="#showFeedbackOfTheWorkers" text="Show feedback Of The Workers" />
-              <MenuItem mnemonicParsing="false" onAction="#createBudgetOfFinancialAidGarmentsWorkers" text="Create a budget of financial aid for the eligible garment workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#laborComplianceOnClick" style="-fx-background-radius: 14;" text="Labor Compliance" />
+                  <MenuItem mnemonicParsing="false" onAction="#assignTaskToWorkersOnClick" style="-fx-background-radius: 12;" text="Assign Task To Workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewAndUpdateInformationAboutGarmentWorker" style="-fx-background-radius: 12;" text="View and Update Information About Garment Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" style="-fx-background-radius: 21;" text="Send Notification And Update to Worker" />
+                  <MenuItem mnemonicParsing="false" onAction="#viewInterviewOnClick" style="-fx-background-radius: 23;" text="View Interviews" />
+                  <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfGarmentWorkers" style="-fx-background-radius: 14;" text="Create pie chart on the ratio of  garment workers" />
+                  <MenuItem mnemonicParsing="false" onAction="#showFeedbackOfTheWorkers" style="-fx-background-radius: 15;" text="Show feedback Of The Workers" />
+              <MenuItem mnemonicParsing="false" onAction="#viewMediaContent" style="-fx-background-radius: 15;" text="View Media Content" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
    </top>
    <bottom>
-      <ButtonBar prefHeight="30.0" prefWidth="603.0" style="-fx-background-color: skyblue;" BorderPane.alignment="CENTER">
+      <ButtonBar prefHeight="30.0" prefWidth="603.0" style="-fx-background-color: linear-gradient(to bottom, #aed8ee,#8d88c6,#94a0e9);" BorderPane.alignment="CENTER">
          <buttons>
             <Label fx:id="userName" style="-fx-background-radius: 23;" text="UserName:">
                <font>
@@ -54,7 +54,7 @@
       </ButtonBar>
    </bottom>
    <center>
-      <ImageView fitHeight="551.0" fitWidth="750.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="549.0" fitWidth="1251.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="@../bgImage/Untitled%20design%20(1).png" />
          </image></ImageView>

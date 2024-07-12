@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -12,12 +14,18 @@
          <font>
             <Font name="System Bold" size="24.0" />
          </font></Text>
-      <ComboBox fx:id="selectMetarialTypeFxId" layoutX="225.0" layoutY="99.0" prefWidth="150.0" promptText="Select Type" />
+      <ComboBox fx:id="selectMetarialTypeFxId" layoutX="305.0" layoutY="90.0" prefWidth="150.0" promptText="Select Type" />
       <Button layoutX="263.0" layoutY="312.0" mnemonicParsing="false" onAction="#trainingMetarialsButtonOnClick" text="Click Here!">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
       <Button fx:id="logout" layoutX="25.0" layoutY="351.0" mnemonicParsing="false" onAction="#backButtonOnClick" text="Back" />
+      <ImageView fitHeight="150.0" fitWidth="339.0" layoutX="61.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="491.0" layoutX="145.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../bgImage/images%20(13)%20(1).jpeg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.sun.javafx.charts.Legend?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -31,7 +32,7 @@
       </Button>
       <TextField fx:id="newTaskNo" layoutX="302.0" layoutY="136.0" onAction="#taskNoClear" prefHeight="31.0" prefWidth="116.0" promptText="Task No" />
       <TextField fx:id="newTaskName" layoutX="302.0" layoutY="195.0" onAction="#taskNameClear" prefHeight="31.0" prefWidth="396.0" promptText="Task Name" />
-      <Label layoutX="218.0" layoutY="38.0" prefHeight="69.0" prefWidth="351.0" text="Assign Task To Workers">
+      <Label layoutX="218.0" layoutY="38.0" prefHeight="69.0" prefWidth="351.0" style="-fx-background-color: transparent; -fx-background-radius: 40;" text="Assign Task To Workers">
          <font>
             <Font name="Sitka Banner Bold" size="31.0" />
          </font>
@@ -39,5 +40,6 @@
       <TextArea fx:id="newTaskDetails" layoutX="302.0" layoutY="243.0" onDragDetected="#taskDetailsClear" prefHeight="104.0" prefWidth="396.0" />
       <Button layoutX="41.0" layoutY="494.0" mnemonicParsing="false" onAction="#backOnClick" prefHeight="49.0" prefWidth="101.0" style="-fx-background-radius: 14;" text="Back" />
       <Button fx:id="logout" layoutX="580.0" layoutY="502.0" mnemonicParsing="false" onAction="#logout" prefHeight="41.0" prefWidth="125.0" style="-fx-background-radius: 14;" text="logout" />
+      <Legend layoutX="86.0" layoutY="71.0" />
    </children>
 </AnchorPane>

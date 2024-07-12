@@ -33,9 +33,6 @@ public class Show_Earnings_SceneController implements Initializable {
     @FXML
     private Button logout;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         earningTypeFxId.getItems().addAll("New Balance","Withdrawal Histry");

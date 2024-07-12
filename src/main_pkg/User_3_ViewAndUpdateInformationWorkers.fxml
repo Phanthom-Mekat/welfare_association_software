@@ -4,6 +4,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
@@ -25,11 +33,55 @@
             <TableColumn fx:id="genderCol" prefWidth="119.0" text="Gender" />
         </columns>
       </TableView>
-      <Button fx:id="loadButton" layoutX="525.0" layoutY="75.0" mnemonicParsing="false" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="205.0" text="Load workers " textFill="#4b21ff">
+      <Button fx:id="loadButton" alignment="CENTER" layoutX="525.0" layoutY="75.0" mnemonicParsing="false" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="205.0" style="-fx-background-radius: 22; -fx-background-color: linear-gradient(to bottom, #aeecee,#88c2c6,#d494e9);" text="Load workers " textFill="#010007">
          <font>
-            <Font name="System Bold" size="14.0" />
-         </font></Button>
-      <Button layoutX="22.0" layoutY="564.0" mnemonicParsing="false" onAction="#backOnclick" prefHeight="31.0" prefWidth="86.0" text="Back" textFill="#5500ff" />
-      <Button fx:id="logout" layoutX="649.0" layoutY="564.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="86.0" text="Logout" textFill="#ff0f0f" />
+            <Font name="Bernard MT Condensed" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="52.1" radius="26.3275" width="55.21">
+               <input>
+                  <Glow>
+                     <input>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </input>
+                  </Glow>
+               </input>
+            </DropShadow>
+         </effect></Button>
+      <Button layoutX="22.0" layoutY="564.0" mnemonicParsing="false" onAction="#backOnclick" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: linear-gradient(to bottom, #aeecee,#88c2c6,#d494e9);" text="Back" textFill="#5500ff">
+         <effect>
+            <InnerShadow>
+               <input>
+                  <DropShadow>
+                     <input>
+                        <Glow>
+                           <input>
+                              <SepiaTone />
+                           </input>
+                        </Glow>
+                     </input>
+                  </DropShadow>
+               </input>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="logout" layoutX="649.0" layoutY="564.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="86.0" style="-fx-background-color: red;" text="Logout" textFill="WHITE">
+         <effect>
+            <Glow>
+               <input>
+                  <ColorAdjust>
+                     <input>
+                        <DropShadow />
+                     </input>
+                  </ColorAdjust>
+               </input>
+            </Glow>
+         </effect></Button>
    </children>
 </AnchorPane>
