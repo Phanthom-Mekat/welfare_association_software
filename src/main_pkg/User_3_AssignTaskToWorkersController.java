@@ -76,7 +76,7 @@ public class User_3_AssignTaskToWorkersController implements Initializable {
         newTaskName.clear();
         newTaskDetails.clear();
     }        
-        
+       
 
     @FXML
     private void taskNoClear(ActionEvent event) {

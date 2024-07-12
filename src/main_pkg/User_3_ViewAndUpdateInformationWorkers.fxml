@@ -19,10 +19,10 @@
       <TableView fx:id="tableView" layoutX="33.0" layoutY="120.0" prefHeight="420.0" prefWidth="702.0">
         <columns>
           <TableColumn fx:id="nameCol" prefWidth="126.0" text="Name" />
-          <TableColumn fx:id="phoneCol" prefWidth="132.0" text="Phone" />
-            <TableColumn fx:id="detailsCol" prefWidth="237.0" text="Details" />
-            <TableColumn fx:id="typeCol" prefWidth="84.0" text="Type" />
-            <TableColumn fx:id="genderCol" prefWidth="144.0" text="Gender" />
+          <TableColumn fx:id="phoneCol" prefWidth="119.0" text="Phone" />
+            <TableColumn fx:id="detailsCol" prefWidth="218.0" text="Details" />
+            <TableColumn fx:id="typeCol" prefWidth="141.0" text="Type" />
+            <TableColumn fx:id="genderCol" prefWidth="119.0" text="Gender" />
         </columns>
       </TableView>
       <Button fx:id="loadButton" layoutX="525.0" layoutY="75.0" mnemonicParsing="false" onAction="#loadButtonOnClick" prefHeight="30.0" prefWidth="205.0" text="Load workers " textFill="#4b21ff">

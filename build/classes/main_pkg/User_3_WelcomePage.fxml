@@ -24,7 +24,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#sendNotificationUpdateToWorker" text="Send Notification And Update to Worker" />
                   <MenuItem mnemonicParsing="false" onAction="#enrollSelectedGarmentsWorkersSkill" text="Enroll Selected Garments Workers Skill" />
                   <MenuItem mnemonicParsing="false" onAction="#createPieChartOnTheRatioOfDeceivedGarmentWorkers" text="Create pie chart on the ratio of  deceived garment workers" />
-                  <MenuItem mnemonicParsing="false" onAction="#senPDFToNGO" text="Send pdf of the information of garments workers who need support to NGO and government agency" />
+                  <MenuItem mnemonicParsing="false" onAction="#showFeedbackOfTheWorkers" text="Show feedback Of The Workers" />
               <MenuItem mnemonicParsing="false" onAction="#createBudgetOfFinancialAidGarmentsWorkers" text="Create a budget of financial aid for the eligible garment workers" />
             </items>
           </Menu>
