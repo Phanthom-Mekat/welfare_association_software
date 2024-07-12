@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/main_pkg/SignUpController.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>42</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+=======
         <group>
-            <file>file:/D:/welfare_association_software/src/main_pkg/User_4_WelcomePageController.java</file>
-            <file>file:/D:/welfare_association_software/src/main_pkg/User_3_WelcomePageController.java</file>
+<<<<<<< Updated upstream
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/New_Patient.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/User_8_WelcomePageController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/Patient_Assignment_SceneController.java</file>
+=======
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/User_3_AssignTaskToWorkersController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/Task_Management_SceneController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/User_7_WelcomePageController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/GitHub/welfare_association_software/src/main_pkg/User_7_Complete_Information_SceneController.java</file>
+>>>>>>> Stashed changes
         </group>
+>>>>>>> 93aa973fc1dcec6264a4cd63d42d9b3ef615b02a
     </open-files>
 </project-private>

@@ -54,7 +54,7 @@ public class User_3_ShowFeedbackController implements Initializable {
         FileInputStream fis = null;
         DataInputStream dis = null;
         String str="";
-
+        int MAX_STRING_LENGTH = 0;
         
         try {
             f = new File("Feedback.bin");
@@ -62,19 +62,17 @@ public class User_3_ShowFeedbackController implements Initializable {
                 feedbackTableView.setPlaceholder(new Label("Oops! Feedback.bin binary file does not exist..."));
             }
             else{
+                int expectedBytesForOneWorker = 2 * Integer.BYTES + 4 * MAX_STRING_LENGTH;
                 fis = new FileInputStream(f);
                 dis = new DataInputStream(fis);
                
-                while (dis.available() > 0) {
-                    System.out.println("n!");
+                while (dis.available() >= expectedBytesForOneWorker) {
                     String name = dis.readUTF();
-                    System.out.println("numb!");
                     int number = dis.readInt();
-                    System.out.println("d");
-                    String feedbacktext = dis.readUTF();
+                    String feedbacks = dis.readUTF();
   
  
-            Feedback feedback = new Feedback(name,number,feedbacktext);
+            Feedback feedback = new Feedback(name,number,feedbacks);
             feedbackList.add(feedback);
                 }
                 feedbackTableView.setItems(feedbackList);

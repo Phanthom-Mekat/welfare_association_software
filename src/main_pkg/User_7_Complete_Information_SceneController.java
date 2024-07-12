@@ -46,8 +46,9 @@ public class User_7_Complete_Information_SceneController implements Initializabl
     @FXML
     private Button logout;
 
-    
-    
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         typeCol.getItems().addAll("Sewing Machine Operators","Cutting Department Workers","Machine Mechanics");
@@ -105,6 +106,8 @@ public class User_7_Complete_Information_SceneController implements Initializabl
         phoneCol.clear();
         nameCol.clear();
         detailsCol.clear();
+//        typeCol.setValue(null);
+//        genderCol.setValue(null);
     }        
       
     
