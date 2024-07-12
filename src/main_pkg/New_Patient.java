@@ -10,18 +10,18 @@ package main_pkg;
  */
 public class New_Patient {
     private int PatientNo;
-    private String PatientName, PatientGender, TaskOption;    
+    private String PatientName, PatientGender, PatientDetails;    
 
-    public New_Patient(int PatientNo, String PatientName, String PatientGender, String TaskOption) {
+    public New_Patient(int PatientNo, String PatientName, String PatientGender, String PatientDetails) {
         this.PatientNo = PatientNo;
         this.PatientName = PatientName;
         this.PatientGender = PatientGender;
-        this.TaskOption = TaskOption;
+        this.PatientDetails = PatientDetails;
     }
 
     @Override
     public String toString() {
-        return "New_Patient{" + "PatientNo=" + PatientNo + ", PatientName=" + PatientName + ", PatientGender=" + PatientGender + ", TaskOption=" + TaskOption + '}';
+        return "New_Patient{" + "PatientNo=" + PatientNo + ", PatientName=" + PatientName + ", PatientGender=" + PatientGender + ", PatientDetails=" + PatientDetails + '}';
     }
 
     public int getPatientNo() {
@@ -48,11 +48,14 @@ public class New_Patient {
         this.PatientGender = PatientGender;
     }
 
-    public String getTaskOption() {
-        return TaskOption;
+    public String getPatientDetails() {
+        return PatientDetails;
     }
 
-    public void setTaskOption(String TaskOption) {
-        this.TaskOption = TaskOption;
+    public void setPatientDetails(String PatientDetails) {
+        this.PatientDetails = PatientDetails;
     }
+
+
+
 }

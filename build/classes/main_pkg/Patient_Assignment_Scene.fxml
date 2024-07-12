@@ -21,11 +21,6 @@
             <TableColumn fx:id="assignPatientDetails" prefWidth="210.66664632161462" text="Details" />
         </columns>
       </TableView>
-      <Button layoutX="274.0" layoutY="355.0" mnemonicParsing="false" onAction="#addNewPatientOnClick" text="ADD">
-         <font>
-            <Font name="System Bold" size="13.0" />
-         </font>
-      </Button>
       <Button layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#newPatientLoadOnClick" text="Load New Patients List">
          <font>
             <Font name="System Bold" size="12.0" />

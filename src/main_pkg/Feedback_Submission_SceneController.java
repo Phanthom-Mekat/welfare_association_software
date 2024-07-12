@@ -4,9 +4,14 @@
  */
 package main_pkg;
 
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +20,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -25,9 +31,13 @@ import javafx.stage.Stage;
 public class Feedback_Submission_SceneController implements Initializable {
 
     @FXML
-    private TextArea feedbackTextArea;
-    @FXML
     private Button logout;
+    @FXML
+    private TextArea feedbackText;
+    @FXML
+    private TextField feedbackPhone;
+    @FXML
+    private TextField feedbackName;
 
     /**
      * Initializes the controller class.
@@ -39,18 +49,33 @@ public class Feedback_Submission_SceneController implements Initializable {
 
     @FXML
     private void submitButtonOnClick(ActionEvent event) {
+        File f = null;
+        FileOutputStream fos = null;
+        DataOutputStream dos = null;
+        
         try {
+            f = new File("Feedback.bin");
+            if(f.exists()) fos = new FileOutputStream(f,true);
+            else fos = new FileOutputStream(f);
+                 dos = new DataOutputStream(fos);
+            
+            dos.writeUTF(feedbackName.getText());
+            dos.writeInt(Integer.parseInt(feedbackPhone.getText()));
+            dos.writeUTF(feedbackText.getText());
 
-    
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Complete_Feedback_Submission.fxml"));
-        Parent root = loader.load();
-        Scene scene = new Scene(root);
-
-        Stage currentStage = (Stage) logout.getScene().getWindow();
-        currentStage.setScene(scene);
-    } catch (IOException e) {
-        e.printStackTrace();
-    }       
+            
+        } catch (IOException ex) {
+            Logger.getLogger(Feedback_Submission_SceneController.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                if(dos != null) dos.close();
+            } catch (IOException ex) {
+                Logger.getLogger(Feedback_Submission_SceneController.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        feedbackPhone.clear();
+        feedbackName.clear();
+        feedbackText.clear();
     }
 
     @FXML
@@ -71,7 +96,6 @@ public class Feedback_Submission_SceneController implements Initializable {
  
 }        
 
-    @FXML
     private void loadFeedbackButtonOnClick(ActionEvent event) {
         try {
 
